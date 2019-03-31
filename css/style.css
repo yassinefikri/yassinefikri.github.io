@@ -1,0 +1,196 @@
+/*General*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+}
+a:hover{
+    color: white;
+}
+h3{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*End Of General*/
+
+/*Part 1*/
+.part1{
+    background-color: rgb(14, 13, 13);
+    height: 969px;
+    overflow: hidden;
+    /*background: rgb(14, 13, 13);*/
+    background:linear-gradient(
+      rgba(14, 13, 13, 0.95), 
+      rgba(14, 13, 13, 0.95)),
+      url("../images/main.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /**/
+    background-attachment: fixed;
+    background-position: center;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    background-color: rgb(14, 13, 13);
+    width: 100%;
+}
+.menu>ul>li{
+    color: rgb(211, 211, 211);
+    font-size: 18px;
+    padding: 20px;
+    float: left;
+    display: inline;
+    font-style: normal;
+    vertical-align: middle;
+    text-align: left;
+    font-family: "Open Sans", arial, sans-serif;
+    border : 1px solid rgb(14, 13, 13);
+    width: auto;
+}
+.menu>ul>li:hover{
+    color:white;
+    background-color: rgb(35, 34, 34);
+}
+.h1mid,.h2mid{
+    height: 100px;
+    color: rgb(211, 211, 211);
+    font-size: 39px;
+    padding: 10px;
+    font-style: normal;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 33px;
+}
+.h2mid{
+    font-size:22px;
+    letter-spacing: 10px;
+    color: rgb(124, 124, 124);
+}
+/*End Of Part1*/
+
+/*Part2*/
+.partofpart2,.partofpart3,.partofpart4{
+    width: 20.3%;
+    margin: 5.9%;
+    height: auto ;/*210px*/;
+    /*background-color: blue;*/
+    display: inline-block;
+    text-align: center;
+    border: 2px black solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    vertical-align: middle;
+}
+.partofpart2header>p,.partofpart3header>p{
+    margin: 1px;
+    font-size: 20px;
+}
+.partofpart2content>p,.partofpart3content>p{
+    font-size: 15px;
+}
+
+#part2l{
+    float: left;
+    margin: 9.1%;
+    margin-bottom: 5%;
+}
+#part2m{
+    margin: 9.1% auto;
+    margin-left: 1.1%;
+    margin-bottom: 5%;
+}
+#part2r{
+    float: right;
+    margin: 9.1%;
+    margin-left: 8%;
+    margin-bottom: 5%;
+}
+/*End of Pärt2*/
+
+/*Part3*/
+.part3header,.part5header{
+    height: 122px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(14, 13, 13);
+    color:white;
+}
+.part3content{
+    background:linear-gradient(
+      rgba(10, 9, 9, 0.9), 
+      rgba(10, 9, 9, 0.9)),
+      url("../images/sk.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /**/
+    background-attachment: fixed;
+    background-position: center;
+    color:white;
+}
+.partofpart3{
+    border: 2px white solid;
+    height: 65px;
+    /*margin: 2% 6%;
+    width: 19%;*/
+}
+
+#part3l1,#part3l2,#part3l3{
+    float: left;
+    margin: 2% 9.1%;
+}
+#part3m1,#part3m2,#part3m3{
+    margin: 2% auto;
+    margin-left: 1.1%;
+}
+#part3r1,#part3r2,#part3r3{
+    float: right;
+    margin: 2% 9.1%;
+    margin-left: 8%;
+}
+/*End Of Part3*/
+
+/*Part 4*/
+.partofpart4{
+    border : 0px;
+    height: 450px;
+    margin: 1%;
+    width: 31%;
+}
+.partofpart4content{
+    font-size: 30px;
+    margin: 1%;
+    text-align: center;
+}
+/*End of Part 4*/
+
+/*Part 5*/
+.part5content{
+    background-color: rgb(14, 13, 13);
+    height: 225px;
+    color: white;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.part5content>p{
+    padding: 6px 10%;
+}
+/*End of Part 5*/
+
+.end{
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Autre*/
+
+
+.part2,.part3{
+    overflow: hidden;
+}
