@@ -54,7 +54,7 @@ h3{
     color:white;
     background-color: rgb(35, 34, 34);
 }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 900px){
 	.menu{
 		width: 0px;
 		height: 0px;
