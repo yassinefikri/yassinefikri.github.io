@@ -69,7 +69,7 @@ h3{
 .h1mid,.h2mid{
     height: auto;
     color: rgb(211, 211, 211);
-    font-size: 40px;
+    font-size: 37px;
     padding: 2% 1%;
     margin: 1%;
     font-style: normal;
@@ -82,7 +82,7 @@ h3{
     padding: 1%;
     margin: 1%;
     font-size:22px;
-    letter-spacing: 10px;
+    letter-spacing: 7px;
     color: rgb(124, 124, 124);
 }
 /*End Of Part1*/
