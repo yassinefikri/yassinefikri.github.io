@@ -51,6 +51,7 @@ h3{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .menu{
     position: fixed;
@@ -111,6 +112,14 @@ h3{
     font-size:27px;
     letter-spacing: 10px;
     color: rgb(124, 124, 124);
+}
+
+#arr{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 7%;
+    left: 48%;
 }
 /*End Of Part1*/
 
@@ -211,4 +220,12 @@ h3{
     height: 50px;
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#leftgoup{
+    float: left;
+    margin-left: 15px;
+}
+#rightgoup{
+    float: right;
+    margin-right: 15px;
 }
