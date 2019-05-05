@@ -33,10 +33,10 @@ $(document).ready(function(){
         }, 2000);
     })
     function lower(){
-        $('#arr').animate({top : "-=40"},1300,"swing",upper)
+        $('#arr').animate({top : "-=40"},2000,"swing",upper)
     }
     function upper(){
-        $('#arr').animate({top : "+=40"},1300,"swing",lower)
+        $('#arr').animate({top : "+=40"},2000,"swing",lower)
     }
     upper();
 });
