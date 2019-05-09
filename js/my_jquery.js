@@ -27,16 +27,16 @@ $(document).ready(function(){
             scrollTop: $("#part5").offset().top
         }, 1000);
     })
-    $('#arr').click(function(){
+    $('.godicon').click(function(){
         $('html, body').animate({
             scrollTop: $("#part2").offset().top
         }, 2000);
     })
     function lower(){
-        $('#arr').animate({top : "-=40"},2000,"swing",upper)
+        $('.godicon').animate({top : "-=40"},2000,"swing",upper)
     }
     function upper(){
-        $('#arr').animate({top : "+=40"},2000,"swing",lower)
+        $('.godicon').animate({top : "+=40"},2000,"swing",lower)
     }
     upper();
 });

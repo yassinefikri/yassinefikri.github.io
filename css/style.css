@@ -114,12 +114,25 @@ h3{
     color: rgb(124, 124, 124);
 }
 
-#arr{
+.godicon{
     height: 40px;
     width: 40px;
     position: absolute;
-    bottom: 7%;
-    left: 48%;
+    top: 87%;
+    left:48%;
+}
+#arr{
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 1000px){
+    .godicon{
+        height: 70px;
+        width: 70px;
+        position: absolute;
+        top: 80%;
+        left:48%;
+    }
 }
 /*End Of Part1*/
 
