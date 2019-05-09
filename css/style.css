@@ -127,10 +127,10 @@ h3{
 }
 @media screen and (max-width: 1000px){
     .godicon{
-        height: 70px;
-        width: 70px;
+        height: 80px;
+        width: 80px;
         position: absolute;
-        top: 80%;
+        top: 85%;
         left:48%;
     }
 }
