@@ -1,30 +1,60 @@
 /*Author : Yassine Fikri*/
 
 $(document).ready(function(){
+    var degg=90;
+    $("#menup").click(function(){
+        $(this).animate({deg: degg},{duration: 300,
+            step: function(now) {
+              $(this).css({ transform: 'rotate(' + now + 'deg)' });
+            }
+          }
+        );
+        degg=degg+90;
+        $("#menu").toggleClass("menu");
+        $("#menu").toggleClass("mobmenuopened");
+        $("#menu>ul>li").toggleClass("mobmenuopenedli");
+        $("#menu>ul").toggleClass("mobmenuopenedlu");
+    })
+
+    function menuclickclassremove(){
+        if($("#menu").hasClass("mobmenuopened")){
+            $("#menu").removeClass("mobmenuopened");
+            $("#menu>ul>li").removeClass("mobmenuopenedli");
+            $("#menu>ul").removeClass("mobmenuopenedlu");
+            $("#menu").addClass("menu");
+        }
+    }
+
+
     $('.end>img').click(function(){
         $('html, body').animate({ scrollTop: 0 }, 'medium');
     });
     $('#mn1').click(function(){
+        menuclickclassremove();
         $('html, body').animate({
             scrollTop: $("#part1").offset().top
         }, 1000);
     })
     $('#mn2').click(function(){
+        menuclickclassremove();
         $('html, body').animate({
             scrollTop: $("#part2").offset().top
         }, 1000);
     })
     $('#mn3').click(function(){
+        menuclickclassremove();
         $('html, body').animate({
             scrollTop: $("#part3").offset().top
         }, 1000);
     })
     $('#mn4').click(function(){
+        menuclickclassremove();
         $('html, body').animate({
             scrollTop: $("#part4").offset().top
         }, 1000);
     })
     $('#mn5').click(function(){
+        menuclickclassremove();
         $('html, body').animate({
             scrollTop: $("#part5").offset().top
         }, 1000);
@@ -41,17 +71,19 @@ $(document).ready(function(){
         $('.godicon').animate({top : "+=40"},2000,"swing",lower)
     }
     upper();
-    //a vars to avoid hide when already hidden /show when already shown
 
     //Pics eff
     $("#dem,#pweb,#mcpc").mouseover(function(){
         $(this).animate({opacity : 1});
+  
     });
     $("#dem,#pweb,#mcpc").mouseout(function(){
         $(this).animate({opacity : 0.7});
     });
 
     //Hide & Show Parts
+
+    //a vars to avoid hide when already hidden /show when already shown
     var a1=0;
     var a21=0;
     var a22=0;
