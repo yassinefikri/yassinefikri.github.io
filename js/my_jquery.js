@@ -1,3 +1,5 @@
+/*Author : Yassine Fikri*/
+
 $(document).ready(function(){
     $('.end>img').click(function(){
         $('html, body').animate({ scrollTop: 0 }, 'medium');
