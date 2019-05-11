@@ -62,6 +62,7 @@ h3{
     top: 0;
     background-color: rgb(14, 13, 13);
     width: 100%;
+    z-index: 1;
 }
 .menu>ul>li{
     color: rgb(211, 211, 211);
@@ -211,6 +212,7 @@ h3{
     height: 100%;
     max-width: 300px;
     max-height: 300px;
+    opacity: 0.7;
 }
 .partofpart4content{
     font-size: 21px;
