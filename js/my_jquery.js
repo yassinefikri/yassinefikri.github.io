@@ -3,18 +3,21 @@
 $(document).ready(function(){
     var degg=90;
     $("#menup").click(function(){
-        $(this).animate({deg: degg},{duration: 300,
-            step: function(now) {
-              $(this).css({ transform: 'rotate(' + now + 'deg)' });
-            }
-          }
-        );
-        degg=degg+90;
+        rotate('#menup');
         $("#menu").toggleClass("menu");
         $("#menu").toggleClass("mobmenuopened");
         $("#menu>ul>li").toggleClass("mobmenuopenedli");
         $("#menu>ul").toggleClass("mobmenuopenedlu");
     })
+    function rotate(imgid){
+    	$(imgid).animate({deg: degg},{duration: 300,
+            step: function(now) {
+              $(imgid).css({ transform: 'rotate(' + now + 'deg)' });
+            }
+          }
+        );
+        degg=degg+90;
+    }
 
     function menuclickclassremove(){
         if($("#menu").hasClass("mobmenuopened")){
@@ -22,6 +25,7 @@ $(document).ready(function(){
             $("#menu>ul>li").removeClass("mobmenuopenedli");
             $("#menu>ul").removeClass("mobmenuopenedlu");
             $("#menu").addClass("menu");
+            rotate('#menup');
         }
     }
 
