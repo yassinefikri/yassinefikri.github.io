@@ -101,11 +101,12 @@ h3{
         overflow: hidden;
     }
     #menup{
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 70px;
+        max-height: 70px;
         padding: 2%;
         position: relative;
         display: block;
+        margin: 2%;
     }
 }
 
