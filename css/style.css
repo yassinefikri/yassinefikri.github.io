@@ -43,10 +43,9 @@ h3{
 .part1{
     height: 100vh;
     overflow: hidden;
-    /*background-color: rgb(14, 13, 13);*/
     background:linear-gradient(
-      rgba(14, 13, 13, 0.95), 
-      rgba(14, 13, 13, 0.95)),
+      rgba(12, 12, 12, 0.925), 
+      rgba(12, 12, 12, 0.925)),
       url("../images/main.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -59,6 +58,16 @@ h3{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+@media screen and (max-width: 1000px){
+    .part1{
+        background:linear-gradient(
+            rgb(14, 13, 13), 
+            rgba(12, 12, 12, 0.295)),
+            url("../images/mobmain.gif");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
 }
 .menu{
     position: fixed;
@@ -175,11 +184,7 @@ h3{
 }
 @media screen and (max-width: 1000px){
     .godicon{
-        height: 80px;
-        width: 80px;
-        position: absolute;
-        top: 85%;
-        left:46%;
+        display:none;
     }
 }
 /*End Of Part1*/
@@ -188,12 +193,26 @@ h3{
 #part2{
     width: 100%;
 }
+.partsofpart2cont{
+    width: 100%;
+    display: block;
+}
 .partofpart2,.partofpart3,.partofpart4{
     width: 32.7%;
     margin: 5% 0%;
     display: inline-block;
     height: auto;
     font-weight: bold;
+}
+@media screen and (max-width: 1000px){
+    .partofpart2,.partofpart3,.partofpart4{
+        display: block;
+        width: auto;
+        margin: 5% auto;
+    }
+    .partsofpart2cont,.partsofpart4cont{
+        margin-top: 15%;
+    }
 }
 .elementofpartofpart2,.elementofpartofpart3,.elementofpartofpart4{
     margin: 2% 15%;
@@ -255,7 +274,8 @@ h3{
     height: 100%;
     max-width: 300px;
     max-height: 300px;
-    opacity: 0.7;
+    opacity: 1;
+    margin-bottom: 5%; 
 }
 .partofpart4content{
     font-size: 21px;
