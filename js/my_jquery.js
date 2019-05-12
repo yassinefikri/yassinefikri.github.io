@@ -28,37 +28,37 @@ $(document).ready(function(){
     $('#mn1').click(function(){
         menuclickclassremove();
         $('html, body').animate({
-            scrollTop: $("#part1").offset().top
+            scrollTop: $("#part1").offset().top-50
         }, 1000);
     })
     $('#mn2').click(function(){
         menuclickclassremove();
         $('html, body').animate({
-            scrollTop: $("#part2").offset().top
+            scrollTop: $("#part2").offset().top-50
         }, 1000);
     })
     $('#mn3').click(function(){
         menuclickclassremove();
         $('html, body').animate({
-            scrollTop: $("#part3").offset().top
+            scrollTop: $("#part3").offset().top-50
         }, 1000);
     })
     $('#mn4').click(function(){
         menuclickclassremove();
         $('html, body').animate({
-            scrollTop: $("#part4").offset().top
+            scrollTop: $("#part4").offset().top-50
         }, 1000);
     })
     $('#mn5').click(function(){
         menuclickclassremove();
         $('html, body').animate({
-            scrollTop: $("#part5").offset().top
+            scrollTop: $("#part5").offset().top-50
         }, 1000);
     })
     //Part 1 Arrow
     $('.godicon').click(function(){
         $('html, body').animate({
-            scrollTop: $("#part2").offset().top
+            scrollTop: $("#part2").offset().top-50
         }, 2000);
     })
     function lower(){
