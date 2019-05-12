@@ -32,45 +32,24 @@ $(document).ready(function(){
                 $("#hamb").removeClass(lasthambclass);
                 $("#hamb").addClass(nexthambclass);
                 lasthambclass=nexthambclass;
-                nexthambclass="hamburger--collapse";
+                nexthambclass="hamburger--emphatic";
                 ma=ma+1;
                 break;
             case 2:
                 $("#hamb").removeClass(lasthambclass);
                 $("#hamb").addClass(nexthambclass);
                 lasthambclass=nexthambclass;
-                nexthambclass="hamburger--vortex";
+                nexthambclass="hamburger--spin";
                 ma=ma+1;
                 break;
             case 3:
                 $("#hamb").removeClass(lasthambclass);
                 $("#hamb").addClass(nexthambclass);
                 lasthambclass=nexthambclass;
-                nexthambclass="hamburger--emphatic";
-                ma=ma+1;
-                break;
-            case 4:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
-                nexthambclass="hamburger--spin";
-                ma=ma+1;
-                break;
-            case 5:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
-                nexthambclass="hamburger--stand";
-                ma=ma+1;
-                break;
-            case 6:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
                 nexthambclass="hamburger--slider";
                 ma=ma+1;
                 break;
-            case 7:
+            case 4:
                 $("#hamb").removeClass(lasthambclass);
                 $("#hamb").addClass(nexthambclass);
                 lasthambclass=nexthambclass;
