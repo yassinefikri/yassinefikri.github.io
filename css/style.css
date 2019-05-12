@@ -174,7 +174,7 @@ h3{
 .godicon{
     display: none;
     position: absolute;
-    top:83vh;
+    top:87vh;
 }
 #arr{
     height: 100%;
@@ -193,8 +193,8 @@ h3{
 @media screen and (max-width: 1000px){
     .godicon{
         display: block;
-        height: 80px;
-        width: 80px;
+        height: 70px;
+        width: 70px;
     }
 }
 /*End Of Part1*/
