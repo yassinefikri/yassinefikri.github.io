@@ -62,7 +62,7 @@ h3{
 @media screen and (max-width: 1000px){
     .part1{
         background:linear-gradient(
-            rgba(14, 13, 13, 1), 
+            rgba(12, 12, 12, 0.5), 
             rgba(12, 12, 12, 0.5)),
             url("../images/mainm.gif");
         background-repeat: no-repeat;
@@ -172,19 +172,29 @@ h3{
 }
 
 .godicon{
-    height: 40px;
-    width: 40px;
+    display: none;
     position: absolute;
-    top: 87%;
-    left:48%;
+    top:85vh;
 }
 #arr{
     height: 100%;
     width: 100%;
 }
+@media screen and (min-width: 1000px){
+    .godicon{
+        display: block;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        /*top: 87%;
+        left:48%;*/
+    }
+}
 @media screen and (max-width: 1000px){
     .godicon{
-        display:none;
+        display: block;
+        height: 80px;
+        width: 80px;
     }
 }
 /*End Of Part1*/
@@ -197,6 +207,9 @@ h3{
     width: 100%;
     display: block;
 }
+.part2header,.part4header{
+    padding-top: 5%; 
+}
 .partofpart2,.partofpart3,.partofpart4{
     width: 32.7%;
     margin: 5% 0%;
@@ -208,10 +221,16 @@ h3{
     .partofpart2,.partofpart3,.partofpart4{
         display: block;
         width: auto;
-        margin: 5% auto;
+        margin: 10% auto;
+    }
+    .partofpart4{
+        margin: 5%;
     }
     .partsofpart2cont,.partsofpart4cont{
         margin-top: 15%;
+    }
+    .part2header,.part4header{
+        padding-top: 10%; 
     }
 }
 .elementofpartofpart2,.elementofpartofpart3,.elementofpartofpart4{
