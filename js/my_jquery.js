@@ -87,7 +87,6 @@ $(document).ready(function(){
         }
     }
 
-
     $(".hamburger").click(function(){
         $(this).toggleClass("is-active");
         $("#menu").toggleClass("menu");
@@ -159,6 +158,13 @@ $(document).ready(function(){
     }
     upper();
 
+    //Part 3 eff
+    $("#part3l1,#part3l2,#part3l3,#part3m1,#part3m2,#part3m3,#part3r1,#part3r2,#part3r3").mouseover(function(){
+        $(this).children().addClass("part3eff");
+    });
+    $("#part3l1,#part3l2,#part3l3,#part3m1,#part3m2,#part3m3,#part3r1,#part3r2,#part3r3").mouseout(function(){
+        $(this).children().removeClass("part3eff");
+    });
     //Pics eff
     $("#dem,#pweb,#mcpc").mouseover(function(){
         $(this).animate({opacity : 0.7});
