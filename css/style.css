@@ -125,9 +125,10 @@ h3{
     list-style-type: none;
 }
 .mobmenuopenedli{
-    font-size: 80px;
+    font-size: 55px;
     color: white;
-    padding: 5%;
+    padding: 2%;
+    border-bottom: 1px solid white;
 }
 
 .part1mid{
