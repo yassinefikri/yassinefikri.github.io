@@ -194,6 +194,11 @@ h3{
         width: 70px;
     }
 }
+@media screen and (max-height: 850px){
+    .godicon{
+        display: none;
+    }
+}
 /*End Of Part1*/
 
 /*Part2*/

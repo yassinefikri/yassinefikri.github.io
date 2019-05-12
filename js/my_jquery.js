@@ -68,14 +68,6 @@ $(document).ready(function(){
         $('.godicon').animate({top : "+=40"},2000,"swing",lower)
     }
     upper();
-    $(window).resize(function(){
-        if(window.innerHeight<850){
-            $('.godicon').css("display","none");
-        }
-        else{
-            $('.godicon').css("display","block");
-        }
-    });
 
     //Pics eff
     $("#dem,#pweb,#mcpc").mouseover(function(){
