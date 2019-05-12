@@ -36,6 +36,18 @@ h3{
 }
 /*End Of General*/
 
+/* Menu Color*/
+.menubg{
+	background-color: rgb(14, 13, 13);
+}
+.menu,.mobmenu{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+/*End of Menu Color
+
 /*Part 1*/
 .mobmenu{
     display: none;
@@ -72,7 +84,6 @@ h3{
 .menu{
     position: fixed;
     top: 0;
-    background-color: rgb(14, 13, 13);
     width: 100%;
     z-index: 1;
 }
@@ -85,12 +96,11 @@ h3{
     vertical-align: middle;
     text-align: left;
     font-family: "Open Sans", arial, sans-serif;
-    border : 1px solid rgb(14, 13, 13);
     width: auto;
 }
 .menu>ul>li:hover{
     color:white;
-    background-color: rgb(35, 34, 34);
+    background-color:rgba(112, 112, 112, 0.1);
 }
 
 @media screen and (max-width: 1000px){
@@ -103,7 +113,6 @@ h3{
         display: inline-block;
         width: 100%;
         height: auto;
-        background-color: rgb(14, 13, 13);
         position: fixed;
         top: 0;
         z-index: 2;

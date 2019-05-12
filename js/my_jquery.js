@@ -2,6 +2,21 @@
 
 $(document).ready(function(){
 
+    //Menu Background Color
+    function menubackgfunction(){
+        if($(window).scrollTop()==0){
+            $('.menu,.mobmenu').removeClass("menubg");
+        }
+        else{
+            $('.menu,.mobmenu').addClass("menubg");
+        }
+    }
+    $(window).scroll(function(){
+        menubackgfunction();
+    });
+    menubackgfunction();
+
+
     $(".hamburger").click(function(){
         $(this).toggleClass("is-active");
         $("#menu").toggleClass("menu");
