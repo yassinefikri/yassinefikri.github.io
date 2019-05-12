@@ -15,6 +15,77 @@ $(document).ready(function(){
         menubackgfunction();
     });
     menubackgfunction();
+    //Menu Animation Switch
+    var ma=0;
+    var lasthambclass="hamburger--slider";
+    var nexthambclass="hamburger--elastic";
+    function menuanimswitch(){
+        switch(ma){
+            case 0:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--spring";
+                ma=ma+1;
+                break;
+            case 1:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--collapse";
+                ma=ma+1;
+                break;
+            case 2:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--vortex";
+                ma=ma+1;
+                break;
+            case 3:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--emphatic";
+                ma=ma+1;
+                break;
+            case 4:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--spin";
+                ma=ma+1;
+                break;
+            case 5:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--stand";
+                ma=ma+1;
+                break;
+            case 6:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--slider";
+                ma=ma+1;
+                break;
+            case 7:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--elastic";
+                ma=0;
+                break;
+            default:
+                $("#hamb").removeClass(lasthambclass);
+                $("#hamb").addClass(nexthambclass);
+                lasthambclass=nexthambclass;
+                nexthambclass="hamburger--slider";
+                ma=0;
+                break;
+        }
+    }
 
 
     $(".hamburger").click(function(){
@@ -23,6 +94,9 @@ $(document).ready(function(){
         $("#menu").toggleClass("mobmenuopened");
         $("#menu>ul>li").toggleClass("mobmenuopenedli");
         $("#menu>ul").toggleClass("mobmenuopenedlu");
+        if(!$("#hamb").hasClass("is-active")){
+            menuanimswitch();
+        }
     })
 
     function menuclickclassremove(){
@@ -32,6 +106,7 @@ $(document).ready(function(){
             $("#menu>ul").removeClass("mobmenuopenedlu");
             $("#menu").addClass("menu");
             $(".hamburger").toggleClass("is-active");
+            menuanimswitch();
         }
     }
 
