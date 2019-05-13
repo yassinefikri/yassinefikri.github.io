@@ -2,6 +2,10 @@
 
 $(document).ready(function(){
 
+    
+    var h=$("#mcpcvidcont").height();
+    $("#mcpcvidcont").height(0);
+
     //Menu Background Color
     function menubackgfunction(){
         if($(window).scrollTop()==0){
@@ -160,9 +164,16 @@ $(document).ready(function(){
     });
 
     //Vid show Hide
-    $("#mcpcvidcont").hide();
+
     $("#mcpcp").click(function(){
-        $("#mcpcvidcont").toggle();
+        if($("#mcpcvidcont").height()==0){
+            $("#mcpcvidcont").animate({height : h},"fast");
+            $("#mcpcvidcont").animate({opacity : "1"},"slow");
+        }
+        else{
+            $("#mcpcvidcont").animate({opacity : "0"},"fast");
+            $("#mcpcvidcont").animate({height : 0},"slow");
+        }
     })
 
     //Hide & Show Parts

@@ -322,7 +322,7 @@ h3{
 #mcpcvidcont{
     background-color: rgb(233, 233, 233);
     padding: 1%;
-    transition:all 1s;
+    opacity: 0;
 }
 .vidshown{
     width: 100%;
