@@ -221,6 +221,10 @@ $(document).ready(function(){
 
         switch(classnbr) {
             case 21:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                    $('#part2l').css("opacity","1");
+                    a11=1;
+                }
                 if(wb>xt && xt>wt && xb>wb){
                     if(wt>lastscroll11 && a11==0){
                     	$('#part2l').animate({opacity : 1});
@@ -244,6 +248,10 @@ $(document).ready(function(){
                 lastscroll11=wt;
                 break;
             case 22:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                        $('#part2m').css("opacity","1");
+                        a12=1;
+                    }
                 if(wb>xt && xt>wt && xb>wb){
                     if(wt>lastscroll12 && a12==0){
                     	$('#part2m').animate({opacity : 1});
@@ -267,6 +275,10 @@ $(document).ready(function(){
                 lastscroll12=wt;
                 break;
             case 23:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                        $('#part2r').css("opacity","1");
+                        a13=1;
+                    }
                 if(wb>xt && xt>wt && xb>wb){
                     if(wt>lastscroll13 && a13==0){
                     	$('#part2r').animate({opacity : 1});
@@ -290,6 +302,10 @@ $(document).ready(function(){
                 lastscroll13=wt;
                 break;
             case 31:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                        $('#part3l1,#part3m1,#part3r1').css("opacity","1");
+                        a21=1;
+                    }
                 if(wb>xt && xt>wt && xb>wb){
                 	if(wt>lastscroll21 && a21==0){
                     	$('#part3l1,#part3m1,#part3r1').animate({opacity : 1});
@@ -313,6 +329,10 @@ $(document).ready(function(){
                 lastscroll21=wt;
                 break;
             case 32:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                        $('#part3l2,#part3m2,#part3r2').css("opacity","1");
+                        a22=1;
+                    }
                 if(wb>xt && xt>wt && xb>wb){
                 	if(wt>lastscroll22 && a22==0){
                 		$('#part3l2,#part3m2,#part3r2').animate({opacity : 1});
@@ -336,6 +356,10 @@ $(document).ready(function(){
                 lastscroll22=wt;
                 break;
             case 33:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                        $('#part3l3,#part3m3,#part3r3').css("opacity","1");
+                        a23=1;
+                    }
                 if(wb>xt && xt>wt && xb>wb){
                 	if(wt>lastscroll23 && a23==0){
                 		$('#part3l3,#part3m3,#part3r3').animate({opacity : 1});
@@ -359,6 +383,10 @@ $(document).ready(function(){
                 lastscroll23=wt;
                 break;
             case 41:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                        $('#demp').css("opacity","1");
+                        a31=1;
+                    }
                 if(wb>xt && xt>wt && xb>wb){
                 	if(wt>lastscroll31 && a31==0){
                 		$('#demp').animate({opacity : 1});
@@ -382,6 +410,10 @@ $(document).ready(function(){
                 lastscroll31=wt;
                 break;
             case 42:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                        $('#pwebp').css("opacity","1");
+                        a32=1;
+                    }
                 if(wb>xt && xt>wt && xb>wb){
                 	if(wt>lastscroll32 && a32==0){
                 		$('#pwebp').animate({opacity : 1});
@@ -405,6 +437,10 @@ $(document).ready(function(){
                 lastscroll32=wt;
                 break;
             case 43:
+                if(xt>wt+(wb-wt)/3 && xb<wb-(wb-wt)/3){
+                        $('#mcpcp').css("opacity","1");
+                        a33=1;
+                    }
                 if(wb>xt && xt>wt && xb>wb){
                 	if(wt>lastscroll33 && a33==0){
                 		$('#mcpcp').animate({opacity : 1});
