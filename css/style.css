@@ -300,6 +300,7 @@ h3{
 .elementofpartofpart4{
     border: 2px white ;
     padding: 3% 1%;
+    position: relative;
 }
 .elementofpartofpart4>img{
     border: 3px black solid;
@@ -314,6 +315,30 @@ h3{
     font-size: 21px;
     margin: auto;
     text-align: center;
+}
+.vidhidden{
+    display: none;
+}
+#mcpcvidcont{
+    background-color: rgb(233, 233, 233);
+    padding: 1%;
+    transition:all 1s;
+}
+.vidshown{
+    width: 100%;
+    height: auto;
+    transition:all 1s;
+}
+.vidheader{
+    display: block;
+    padding-top: 2%; 
+    font-size: 25px;
+    font-weight: bold;
+}
+#mcpcvid{
+    margin: 2% auto;
+    border: 3px solid black;
+    display: block;
 }
 /*End of Part 4*/
 
@@ -344,3 +369,4 @@ h3{
     float: right;
     margin-right: 15px;
 }
+

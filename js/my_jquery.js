@@ -159,6 +159,12 @@ $(document).ready(function(){
         $(this).animate({opacity : 1});
     });
 
+    //Vid show Hide
+    $("#mcpcvidcont").hide();
+    $("#mcpcp").click(function(){
+        $("#mcpcvidcont").toggle();
+    })
+
     //Hide & Show Parts
     function myfunction(classnameid,fadetime){
     	var xt=$(classnameid).offset().top;
