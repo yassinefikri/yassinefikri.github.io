@@ -258,6 +258,9 @@ h3{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     vertical-align: middle;
 }
+.elementofpartofpart2{
+    padding: 7px;
+}
 .partofpart2header>p,.partofpart3header>p{
     margin: 1%;
     padding: 2% 0%;
