@@ -1,9 +1,12 @@
-/*Author : Yassine Fikri*/
+/*---------------------------------
+|  Personal Web Main Jquery File  |
+|      author : Yassine Fikri     |
+---------------------------------*/
 
 $(document).ready(function(){
 
     
-    var h=$("#mcpcvidcont").height();
+    var h4=$("#mcpcvidcont").height();
     $("#mcpcvidcont").height(0);
 
     //Menu Background Color
@@ -97,7 +100,7 @@ $(document).ready(function(){
 
     //Bottom Pics
     $('.end>img').click(function(){
-        $('html, body').animate({ scrollTop: 0 }, 'medium');
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
     });
 
     //Menu Click Moving
@@ -139,12 +142,20 @@ $(document).ready(function(){
         }, 2000);
     })
     function lower(){
-        $('.godicon').animate({top : "-=40"},2000,"swing",upper)
+        $('.godicon').animate({top : "-=40"},2000,"swing",upper);
     }
     function upper(){
-        $('.godicon').animate({top : "+=40"},2000,"swing",lower)
+        $('.godicon').animate({top : "+=40"},2000,"swing",lower);
     }
     upper();
+
+    //Part 2 Eff
+    $(".elementofpartofpart2").mouseenter(function(){
+        $(this).animate({ 'zoom': 1.3 }, 500);
+    })
+    $(".elementofpartofpart2").mouseleave(function(){
+        $(this).animate({'zoom': 1 }, 500);
+    })
 
     //Part 3 eff
     $("#part3l1,#part3l2,#part3l3,#part3m1,#part3m2,#part3m3,#part3r1,#part3r2,#part3r3").mouseover(function(){
@@ -163,20 +174,36 @@ $(document).ready(function(){
         $(this).animate({opacity : 1});
     });
 
+    //Enable / Disable show hide
+    var enablepart4=1;
+
     //Vid show Hide
 
     $("#mcpcp").click(function(){
         if($("#mcpcvidcont").height()==0){
-            $("#mcpcvidcont").animate({height : h},"fast");
-            $("#mcpcvidcont").animate({opacity : "1"},"slow");
+            enablepart4=0;
+            show("#demp,#pweb,#mcpcp",0);
+            $("#mcpcvid").attr('src','https://www.youtube.com/embed/UL7QOMiLzdU');
+            $("#mcpcvidcont").animate({height : h4},200);
+            $("#mcpcvidcont").animate({opacity : "1"},1000);
         }
         else{
-            $("#mcpcvidcont").animate({opacity : "0"},"fast");
-            $("#mcpcvidcont").animate({height : 0},"slow");
+            enablepart4=1;
+            $("#mcpcvidcont").animate({opacity : "0"},200);
+            $("#mcpcvidcont").animate({height : 0},1000);
+            $("#mcpcvid").attr('src','');
         }
     })
 
     //Hide & Show Parts
+
+    function show(classnameid,fadetime){
+        $(classnameid).fadeTo(fadetime,1);
+    }
+    function hide(classnameid,fadetime){
+        $(classnameid).fadeTo(fadetime,0);
+    }
+
     function myfunction(classnameid,fadetime){
     	var xt=$(classnameid).offset().top;
         var xb=xt+$(classnameid).height();
@@ -184,10 +211,10 @@ $(document).ready(function(){
         var wb=wt+window.innerHeight;
         var opa=$(classnameid).css("opacity");
         if(xt>=wt && xb<=wb && opa==0){
-            $(classnameid).fadeTo(fadetime,1);
+            show(classnameid,fadetime);
         }
         if((xt>wb || wt>xb) && opa==1){
-            $(classnameid).fadeTo(fadetime,0);
+            hide(classnameid,fadetime);
         }
     }
     function multicalls(fadetime){
@@ -202,10 +229,12 @@ $(document).ready(function(){
         myfunction('#part3r2',fadetime);
         myfunction('#part3l3',fadetime);
         myfunction('#part3m3',fadetime);
-        myfunction('#part3r3',fadetime);
-        myfunction('#demp',fadetime);
-        myfunction('#pwebp',fadetime);
-        myfunction('#mcpcp',fadetime);
+        myfunction('#part3r3',fadetime); 
+        if(enablepart4==1){  
+            myfunction('#demp',fadetime);
+            myfunction('#pwebp',fadetime);
+            myfunction('#mcpcp',fadetime);
+        }
     }
     function firsthide(){
         multicalls(0);
