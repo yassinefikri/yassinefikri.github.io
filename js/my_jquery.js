@@ -151,10 +151,10 @@ $(document).ready(function(){
 
     //Part 2 Eff
     $(".elementofpartofpart2").mouseenter(function(){
-        $(this).animate({ 'zoom': 1.3 }, 500);
+        $(this).animate({ 'zoom': 1.3 }, 200);
     })
     $(".elementofpartofpart2").mouseleave(function(){
-        $(this).animate({'zoom': 1 }, 500);
+        $(this).animate({'zoom': 1 }, 200);
     })
 
     //Part 3 eff
