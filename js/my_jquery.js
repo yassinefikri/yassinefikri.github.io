@@ -75,8 +75,8 @@ $(document).ready(function(){
     }
 
     //Menu Click Classes Toggle
-    $(".hamburger").click(function(){
-        $(this).toggleClass("is-active");
+    $("#hamb").click(function(){
+        $(this).toggleClass('open');
         $("#menu").toggleClass("menu");
         $("#menu").toggleClass("mobmenuopened");
         $("#menu>ul>li").toggleClass("mobmenuopenedli");
@@ -93,7 +93,7 @@ $(document).ready(function(){
             $("#menu>ul>li").removeClass("mobmenuopenedli");
             $("#menu>ul").removeClass("mobmenuopenedlu");
             $("#menu").addClass("menu");
-            $(".hamburger").toggleClass("is-active");
+            $("#hamb").toggleClass('open');
             menuanimswitch();
         }
     }
