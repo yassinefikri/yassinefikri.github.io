@@ -106,12 +106,10 @@ function Star(x, y, size, velocity) {
 	this.velocity = velocity;
 }
 
-//Use
-
 var container = document.getElementById('starscont');
 var starfield = new Starfield();
 starfield.initialise(container);
-starfield.stars = 200;      //  The number of stars.
-starfield.minVelocity = 30;  //  The minimum star velocity in pixels per second.
-starfield.maxVelocity = 50; //  The maximum star velocity in pixels per second.	
+starfield.stars = 200;
+starfield.minVelocity = 30;
+starfield.maxVelocity = 50;	
 starfield.start();
