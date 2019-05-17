@@ -23,57 +23,6 @@ $(document).ready(function(){
     });
     menubackgfunction();
 
-    //Menu Animation Switch
-    var ma=0;
-    var lasthambclass="hamburger--slider";
-    var nexthambclass="hamburger--elastic";
-    function menuanimswitch(){
-        switch(ma){
-            case 0:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
-                nexthambclass="hamburger--spring";
-                ma=ma+1;
-                break;
-            case 1:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
-                nexthambclass="hamburger--emphatic";
-                ma=ma+1;
-                break;
-            case 2:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
-                nexthambclass="hamburger--spin";
-                ma=ma+1;
-                break;
-            case 3:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
-                nexthambclass="hamburger--slider";
-                ma=ma+1;
-                break;
-            case 4:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
-                nexthambclass="hamburger--elastic";
-                ma=0;
-                break;
-            default:
-                $("#hamb").removeClass(lasthambclass);
-                $("#hamb").addClass(nexthambclass);
-                lasthambclass=nexthambclass;
-                nexthambclass="hamburger--slider";
-                ma=0;
-                break;
-        }
-    }
-
     //Menu Click Classes Toggle
     $("#hamb").click(function(){
         $(this).toggleClass('open');
