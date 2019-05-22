@@ -65,6 +65,7 @@ body{
     position: absolute;
     top: 0px;
     left: 0px;
+    background: radial-gradient(#000, #111), #000;
 }
 canvas{
     width: 100%;
