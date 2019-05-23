@@ -31,7 +31,6 @@ $(document).ready(function(){
         $("#menu>ul>li").toggleClass("mobmenuopenedli");
         $("#menu>ul").toggleClass("mobmenuopenedlu");
         if(!$("#hamb").hasClass("is-active")){
-            menuanimswitch();
         }
     })
 
@@ -43,7 +42,6 @@ $(document).ready(function(){
             $("#menu>ul").removeClass("mobmenuopenedlu");
             $("#menu").addClass("menu");
             $("#hamb").toggleClass('open');
-            menuanimswitch();
         }
     }
 
