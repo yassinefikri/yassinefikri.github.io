@@ -68,3 +68,17 @@ function animate(){
     }
 }
 animate();
+
+window.onresize = resize;
+function resize() {
+    ww= document.body.clientWidth; 
+    wh= window.innerHeight;
+    canvas.height=wh;
+    canvas.width=ww;
+    for(var i=0;i<nstar;i++) {
+        stars[i].posx= Math.random()*ww;
+        stars[i].posy= Math.random()*wh;
+        stars[i].dx= (stars[i].posx-ww/2)/50;
+        stars[i].dy= (stars[i].posy-wh/2)/50;
+    }
+}
