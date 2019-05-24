@@ -9,12 +9,6 @@ $(document).ready(function(){
     var h4=$("#mcpcvidcont").height();
     $("#mcpcvidcont").height(0);
 
-    //Resizing Canvas
-    $(window).resize(function(){
-        $("canvas").height(window.innerHeight);
-        $("canvas").width(window.innerWidth);
-    })
-
     //Menu Background Color
     function menubackgfunction(){
         if($(window).scrollTop()==0){

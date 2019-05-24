@@ -77,8 +77,8 @@ window.onresize = resize;
 function resize() {
     ww= document.body.clientWidth; 
     wh= window.innerHeight;
-    canvas.width=ww;
     canvas.height=wh;
+    canvas.width=ww;
     for(var i=0;i<nstar;i++) {
         stars[i].posx= Math.random()*ww;
         stars[i].posy= Math.random()*wh;
