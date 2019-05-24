@@ -3,15 +3,18 @@
 |           author : Yassine Fikri           |
 --------------------------------------------*/
 
+var nstar= 250; // Set the Number of Stars
+var backgroundcolor= "rgb(1, 0, 7)" //Set Background Color
 
-var canvas = document.querySelector("canvas");
+var canvas= document.querySelector("canvas");
 
-var ww=document.body.clientWidth;
-var wh=window.innerHeight;
+//var ww=window.innerWidth;
+var ww= document.body.clientWidth; 
+var wh= window.innerHeight;
 
-canvas.width=ww;
-canvas.height=wh;
-canvas.style.backgroundColor= "rgb(1, 0, 7)";
+canvas.width= ww;
+canvas.height= wh;
+canvas.style.backgroundColor= backgroundcolor; 
 
 var c= canvas.getContext("2d");
 
@@ -22,8 +25,8 @@ function Star(posx,posy){
     this.ray= 0; //Rayon
     this.opc= Math.random(); //Opacity
 
-    this.dx= (this.posx-ww/2)/100;
-    this.dy= (this.posy-wh/2)/100;
+    this.dx= (this.posx-ww/2)/50;
+    this.dy= (this.posy-wh/2)/50;
 
     this.draw= function(){
         c.beginPath();
@@ -55,30 +58,32 @@ function Star(posx,posy){
     }
 }
 
-var stars = new Array(250);
-for(var i=0;i<250;i++){
+//Creating the Stars
+var stars = new Array(nstar);
+for(var i=0;i<nstar;i++){
     stars[i]= new Star(Math.random()*ww,Math.random()*wh);
 }
 
 function animate(){
     requestAnimationFrame(animate);
     c.clearRect(0,0,ww,wh);
-    for(var i=0;i<250;i++){
+    for(var i=0;i<nstar;i++){
         stars[i].update();
     }
 }
 animate();
 
+//Resizing the Canvas when Resizing Window
+window.onresize = resize;
 function resize() {
-	wh= window.innerHeight;
     ww= document.body.clientWidth; 
+    wh= window.innerHeight;
     canvas.height=wh;
     canvas.width=ww;
-    for(var i=0;i<250;i++) {
+    for(var i=0;i<nstar;i++) {
         stars[i].posx= Math.random()*ww;
         stars[i].posy= Math.random()*wh;
         stars[i].dx= (stars[i].posx-ww/2)/50;
         stars[i].dy= (stars[i].posy-wh/2)/50;
     }
 }
-window.onresize = resize;
