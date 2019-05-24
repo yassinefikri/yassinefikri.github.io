@@ -8,7 +8,6 @@ var backgroundcolor= "rgb(1, 0, 7)" //Set Background Color
 
 var canvas= document.querySelector("canvas");
 
-//var ww=window.innerWidth;
 var ww= document.body.clientWidth; 
 var wh= window.innerHeight;
 
@@ -78,8 +77,8 @@ window.onresize = resize;
 function resize() {
     ww= document.body.clientWidth; 
     wh= window.innerHeight;
-    canvas.height=wh;
     canvas.width=ww;
+    canvas.height=wh;
     for(var i=0;i<nstar;i++) {
         stars[i].posx= Math.random()*ww;
         stars[i].posy= Math.random()*wh;
