@@ -11,6 +11,7 @@ var wh=window.innerHeight;
 
 canvas.width=ww;
 canvas.height=wh;
+canvas.style.backgroundColor= "rgb(1, 0, 7)";
 
 var c= canvas.getContext("2d");
 
@@ -23,9 +24,6 @@ function Star(posx,posy){
 
     this.dx= (this.posx-ww/2)/100;
     this.dy= (this.posy-wh/2)/100;
-
-    //console.log(this.dx+" | "+this.dy);
-    console.log(this.ang);
 
     this.draw= function(){
         c.beginPath();
