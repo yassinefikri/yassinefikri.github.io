@@ -58,12 +58,6 @@ body{
 }
 /*End of Menu Color*/
 
-canvas{
-    background-color: rgb(1, 0, 7);
-    height: 100vh;
-    width: 100%;
-}
-
 /*Part 1*/
 .mobmenu{
     display: none;
