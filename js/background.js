@@ -70,8 +70,8 @@ function animate(){
 animate();
 
 function resize() {
+	wh= window.innerHeight;
     ww= document.body.clientWidth; 
-    wh= window.innerHeight;
     canvas.height=wh;
     canvas.width=ww;
     for(var i=0;i<250;i++) {
