@@ -90,6 +90,7 @@ body{
     text-align: left;
     font-family: "Open Sans", arial, sans-serif;
     width: auto;
+    cursor: pointer;
 }
 .menu>ul>li:hover{
     color:white;
