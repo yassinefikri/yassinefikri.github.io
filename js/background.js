@@ -4,7 +4,7 @@
 --------------------------------------------*/
 
 var nstar= 300; // Set the Number of Stars , default [300]
-var backgroundcolor= "rgb(1, 0, 7)"; // Set Background Color
+var backgroundcolor= "rgb(0, 1, 12)"; // Set Background Color
 var starsz = 0.045 // Set stars size increase , default [0.045]
 
 var canvas= document.querySelector("canvas");
@@ -19,9 +19,9 @@ canvas.style.backgroundColor= backgroundcolor;
 
 var c= canvas.getContext("2d");
 
-function Star(posx,posy){
+function Star(){
 
-    this.init= function(){
+    this.init= function(posx,posy){
         //Coordonnees
         this.posx= posx;
         this.posy= posy; 
@@ -61,8 +61,8 @@ function Star(posx,posy){
 //Creating the Stars
 var stars = new Array(nstar);
 for(var i=0;i<nstar;i++){
-    stars[i]= new Star(Math.random()*ww,Math.random()*wh);
-    stars[i].init();
+    stars[i]= new Star();
+    stars[i].init(Math.random()*ww,Math.random()*wh);
 }
 
 function animate(){
@@ -82,6 +82,6 @@ function resize() {
     canvas.height=wh;
     canvas.width=ww;
     for(var i=0;i<nstar;i++) {
-        stars[i].init();
+        stars[i].init(Math.random()*ww,Math.random()*wh);
     }
 }

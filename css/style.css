@@ -19,6 +19,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 p{
     font-family: TxtF;
@@ -178,7 +179,10 @@ body{
 .godicon{
     display: none;
     position: absolute;
-    top:87vh;
+    top: 86vh;
+}
+.godicon>img{
+    cursor: pointer;
 }
 #arr{
     height: 100%;
@@ -223,8 +227,8 @@ body{
     padding-top: 5%; 
 }
 .partofpart2,.partofpart3,.partofpart4{
-    width: 32.7%;
-    margin: 5% 0%;
+    width: 33%;
+    margin: 5% 0%;;
     display: inline-block;
     height: auto;
     font-weight: bold;
@@ -302,7 +306,7 @@ body{
     height: auto;
     margin: 1% 0%;
 }
-.elementofpartofpart3{
+.elementofpartofpart3,.elementofpartofpart4{
     border: 2px white solid;
     padding: 3% 1%;
 }
@@ -312,48 +316,95 @@ body{
 /*End Of Part3*/
 
 /*Part 4*/
+
 .elementofpartofpart4{
-    border: 2px white ;
-    padding: 3% 1%;
-    position: relative;
+    padding: 2% 0%;
 }
-.elementofpartofpart4>img{
-    border: 3px black solid;
-    width: 100%;
-    height: 100%;
+.part4imgcont{
+    margin: auto;
+    border: 3px solid black;
+    padding-bottom: 0px;
+    margin-bottom: 5%;
     max-width: 300px;
     max-height: 300px;
-    opacity: 1;
-    margin-bottom: 5%; 
+    font-size: 0;
+    position: relative;
+}
+.part4imgcont>img{
+    height: 100%;
+    width: 100%;
+    border: 3px;
+    cursor: pointer;
 }
 .partofpart4content{
     font-size: 21px;
     margin: auto;
-    text-align: center;
-}
-.vidhidden{
-    display: none;
+    /*text-align: center;*/
 }
 #mcpcvidcont{
     background-color: rgb(233, 233, 233);
-    opacity: 0;
-    padding-bottom: 1%;
-}
-.vidshown{
-    width: 100%;
-    height: auto;
-    transition:all 1s;
+    position: relative;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 .vidheader{
+    margin: auto;
     display: block;
-    padding-top: 2%; 
-    font-size: 25px;
-    font-weight: bold;
 }
 #mcpcvid{
     margin: 2% auto;
     border: 3px solid black;
-    display: block;
+}
+#mcpcdesc,#mcpcviddiv{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 2%;
+    text-align: center;
+}
+#mcpcviddiv{
+    padding-top:0%; 
+}
+#pwdesc,#demdesc{
+    width: 100%;
+    height: auto;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 2%;
+    text-align: center;
+    background-color: rgb(233, 233, 233);
+    position: relative;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+.techused{
+    width: 24.5%;
+    height: auto;
+    display: inline-block;
+    margin: 5% auto;
+}
+.techused>img{
+    max-width: 200px;
+    max-height: 220px;
+}
+#javad{
+    margin-bottom: 0px;
+    margin-top: 2%;
+}
+@media screen and (min-width: 1000px){
+    .techused{
+        margin-bottom: 0%;
+        margin-top: 3%;
+    }
+    #mcpcvid{
+        margin-bottom: 0%;
+    }
+}
+@media screen and (max-width: 1000px){
+    .techused{
+        display: block;
+    }
 }
 /*End of Part 4*/
 
@@ -374,7 +425,6 @@ body{
 .end{
     text-align: center;
     position: relative;
-    /*height: 50px;*/
     height: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -382,20 +432,25 @@ body{
     font-size: 17px;
     margin: 1% auto;
 }
-@media screen and (max-width: 1000px){
-    .end>p{
-        font-size: 10px;
-    }
-}
 #leftgoup{
     float: left;
     margin-left: 15px;
     height: 25px;
     width:25px;
+    cursor: pointer;
 }
 #rightgoup{
     float: right;
     margin-right: 15px;
     height: 25px;
     width:25px;
+    cursor: pointer;
+}
+@media screen and (max-width: 1000px){
+    .end>p{
+        font-size: 13px;
+    }
+    #leftgoup,#rightgoup{
+        display: none;
+    }
 }
