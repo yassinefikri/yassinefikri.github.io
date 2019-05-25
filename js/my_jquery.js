@@ -25,7 +25,7 @@ $(document).ready(function(){
     //Resizing Window
     $(window).resize(function(){
         $(".godicon").stop();
-        $(".godicon").offset({top: window.innerHeight*0.86});
+        $(".godicon").offset({top: window.innerHeight*0.87});
         godiconrun();
         checkhideshow();
         checkdesc();
@@ -117,8 +117,7 @@ $(document).ready(function(){
         $('.godicon').animate({top : "+="+dy},dur,"swing",function(){lower(dy,dur)});
     }
     function godiconrun(){
-        if (window.innerWidth>800) upper(40,2000);
-        else upper(60,2000);
+        upper(window.innerHeight/20,2000);
     }
     godiconrun();
 
