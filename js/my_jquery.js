@@ -157,6 +157,7 @@ $(document).ready(function(){
             if($(second1).css("display")!="none") $(second1).fadeOut(100);
             if($(second2).css("display")!="none") $(second2).fadeOut(100);
             if(main=="#mcpcvidcont") $("#mcpcvid").attr('src','https://www.youtube.com/embed/UL7QOMiLzdU');
+            if(main!="#mcpcvidcont") $("#mcpcvid").attr('src','');
             $(main).fadeIn(1000)
         }
         else{
