@@ -154,18 +154,18 @@ $(document).ready(function(){
 
     function hideshowdesc(main,second1,second2){
         if($(main).css("display")=="none"){
-            enablepart4=0;
             if($(second1).css("display")!="none") $(second1).fadeOut(100);
             if($(second2).css("display")!="none") $(second2).fadeOut(100);
             if(main=="#mcpcvidcont") $("#mcpcvid").attr('src','https://www.youtube.com/embed/UL7QOMiLzdU');
             $(main).fadeIn(1000)
         }
         else{
-            enablepart4=1;
             $(main).fadeOut(1000);
             if(main=="#mcpcvidcont") $("#mcpcvid").attr('src','');
         }
-        show("#demp,#pweb,#mcpcp",0);
+        show("#demp",0);
+        show("#pweb",0);
+        show("#mcpcp",0);
     }
     $("#mcpcp").click(function(){
         hideshowdesc("#mcpcvidcont","#pwdesc","#demdesc");
