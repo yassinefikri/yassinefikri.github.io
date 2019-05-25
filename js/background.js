@@ -3,9 +3,9 @@
 |           author : Yassine Fikri           |
 --------------------------------------------*/
 
-var nstar= 250; // Set the Number of Stars
+var nstar= 300; // Set the Number of Stars , default [300]
 var backgroundcolor= "rgb(1, 0, 7)"; // Set Background Color
-var starsz = 0.045 // Set stars size increase
+var starsz = 0.045 // Set stars size increase , default [0.045]
 
 var canvas= document.querySelector("canvas");
 
@@ -20,14 +20,17 @@ canvas.style.backgroundColor= backgroundcolor;
 var c= canvas.getContext("2d");
 
 function Star(posx,posy){
-    //Coordonnees
-    this.posx= posx;
-    this.posy= posy; 
-    this.ray= 0; //Rayon
-    this.opc= Math.random(); //Opacity
-    this.dx= (this.posx-ww/2)/50;
-    this.dy= (this.posy-wh/2)/50;
-    this.dr=starsz;
+
+    this.init= function(){
+        //Coordonnees
+        this.posx= posx;
+        this.posy= posy; 
+        this.ray= 0; //Rayon
+        this.opc= Math.random(); //Opacity
+        this.dx= (this.posx-ww/2)/50;
+        this.dy= (this.posy-wh/2)/50;
+        this.dr=starsz;
+    }
 
     this.draw= function(){
         c.beginPath();
@@ -39,7 +42,7 @@ function Star(posx,posy){
     this.update= function(){
         this.posx+=this.dx;
         this.posy+=this.dy;
-        if(this.ray>3) this.dr*=0.9;
+        if(this.ray>3) this.dr*=0.9; //this.dr/=2;
         this.ray+=this.dr;
 
         this.draw();
@@ -59,6 +62,7 @@ function Star(posx,posy){
 var stars = new Array(nstar);
 for(var i=0;i<nstar;i++){
     stars[i]= new Star(Math.random()*ww,Math.random()*wh);
+    stars[i].init();
 }
 
 function animate(){
@@ -78,9 +82,6 @@ function resize() {
     canvas.height=wh;
     canvas.width=ww;
     for(var i=0;i<nstar;i++) {
-        stars[i].posx= Math.random()*ww;
-        stars[i].posy= Math.random()*wh;
-        stars[i].dx= (stars[i].posx-ww/2)/50;
-        stars[i].dy= (stars[i].posy-wh/2)/50;
+        stars[i].init();
     }
 }
