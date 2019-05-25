@@ -342,7 +342,7 @@ body{
     /*text-align: center;*/
 }
 #mcpcvidcont{
-    background-color: rgb(233, 233, 233);
+    background-color: #DCDCDC;
     position: relative;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
@@ -373,7 +373,7 @@ body{
     font-size: 22px;
     padding: 2%;
     text-align: center;
-    background-color: rgb(233, 233, 233);
+    background-color: #DCDCDC;
     position: relative;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
