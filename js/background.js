@@ -4,13 +4,15 @@
 --------------------------------------------*/
 
 var nstar= 250; // Set the Number of Stars
-var backgroundcolor= "rgb(1, 0, 7)" //Set Background Color
+var backgroundcolor= "rgb(1, 0, 7)"; // Set Background Color
+var starsz = 0.045 // Set stars size increase
 
 var canvas= document.querySelector("canvas");
 
 var ww= document.body.clientWidth; 
 var wh= window.innerHeight;
 
+//Setting Canvas Height & Width
 canvas.width= ww;
 canvas.height= wh;
 canvas.style.backgroundColor= backgroundcolor; 
@@ -23,9 +25,9 @@ function Star(posx,posy){
     this.posy= posy; 
     this.ray= 0; //Rayon
     this.opc= Math.random(); //Opacity
-
     this.dx= (this.posx-ww/2)/50;
     this.dy= (this.posy-wh/2)/50;
+    this.dr=starsz;
 
     this.draw= function(){
         c.beginPath();
@@ -37,13 +39,8 @@ function Star(posx,posy){
     this.update= function(){
         this.posx+=this.dx;
         this.posy+=this.dy;
-
-        if(Math.abs(this.dx)<2 && Math.abs(this.dy)<2){
-            if(this.ray<3) this.ray+=0.001;
-        }
-        else {
-            if(this.ray<5) this.ray+=0.03;
-        }
+        if(this.ray>3) this.dr*=0.9;
+        this.ray+=this.dr;
 
         this.draw();
         if(this.posx-this.ray>ww || this.posx+this.ray<0) this.reset();
@@ -54,6 +51,7 @@ function Star(posx,posy){
         this.posx=ww/2;
         this.posy=wh/2;
         this.ray=0;
+        this.dr=starsz;
     }
 }
 
