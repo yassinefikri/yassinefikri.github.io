@@ -25,7 +25,8 @@ $(document).ready(function(){
     //Resizing Window
     $(window).resize(function(){
         $(".godicon").stop();
-        $(".godicon").offset({top: window.innerHeight*0.86});
+        if(window.innerHeight<=1000) $(".godicon").offset({top: window.innerHeight*0.86});
+        else $(".godicon").offset({top: window.innerHeight*0.89});
         godiconrun();
         checkhideshow();
         checkdesc();
