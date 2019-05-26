@@ -179,7 +179,7 @@ body{
 .godicon{
     display: none;
     position: absolute;
-    top: 87vh;
+    top: 86vh;
 }
 .godicon>img{
     cursor: pointer;
