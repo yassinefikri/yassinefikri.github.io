@@ -4,23 +4,21 @@
 --------------------------------------------*/
 
 var nstar= 300; // Set the Number of Stars , default [300]
-var backgroundcolor= "rgb(0, 1, 12)"; // Set Background Color
+var backgroundcolor= "radial-gradient(#000000,#090c12)"; // Set Background Color default["radial-gradient(#000000,#090c12)"]
 var starsz = 0.045 // Set stars size increase , default [0.045]
 
 var canvas= document.querySelector("canvas");
-
 var ww= document.body.clientWidth; 
 var wh= window.innerHeight;
 
 //Setting Canvas Height & Width
 canvas.width= ww;
 canvas.height= wh;
-canvas.style.backgroundColor= backgroundcolor; 
+canvas.style.backgroundImage= backgroundcolor; 
 
 var c= canvas.getContext("2d");
 
 function Star(){
-
     this.init= function(posx,posy){
         //Coordonnees
         this.posx= posx;
@@ -31,25 +29,21 @@ function Star(){
         this.dy= (this.posy-wh/2)/50;
         this.dr=starsz;
     }
-
     this.draw= function(){
         c.beginPath();
         c.fillStyle="rgba(255,255,255,"+this.opc+")";
         c.rect(this.posx,this.posy,this.ray,this.ray);
         c.fill();
     }
-
     this.update= function(){
         this.posx+=this.dx;
         this.posy+=this.dy;
-        if(this.ray>3) this.dr*=0.9; //this.dr/=2;
+        if(this.ray>3) this.dr*=0.9;
         this.ray+=this.dr;
-
         this.draw();
         if(this.posx-this.ray>ww || this.posx+this.ray<0) this.reset();
         if(this.posy-this.ray>wh || this.posy+this.ray<0) this.reset();
     }
-
     this.reset= function(){
         this.posx=ww/2;
         this.posy=wh/2;
