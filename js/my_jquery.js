@@ -117,7 +117,7 @@ $(document).ready(function(){
         $('.godicon').animate({top : "+="+dy},dur,"swing",function(){lower(dy,dur)});
     }
     function godiconrun(){
-        upper(window.innerHeight/20,2000);
+        upper(window.innerHeight/25,2000);
     }
     godiconrun();
 
