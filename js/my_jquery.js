@@ -154,11 +154,11 @@ $(document).ready(function(){
 
     function hideshowdesc(main,second1,second2){
         if($(main).css("display")=="none"){
-            if($(second1).css("display")!="none") $(second1).fadeOut(100);
-            if($(second2).css("display")!="none") $(second2).fadeOut(100);
+            if($(second1).css("display")!="none") $(second1).fadeOut(400);
+            if($(second2).css("display")!="none") $(second2).fadeOut(400);
             if(main=="#mcpcvidcont") $("#mcpcvid").attr('src','https://www.youtube.com/embed/UL7QOMiLzdU');
             if(main!="#mcpcvidcont") $("#mcpcvid").attr('src','');
-            $(main).fadeIn(1000)
+            $(main).fadeIn(1200)
         }
         else{
             $(main).fadeOut(1000);
