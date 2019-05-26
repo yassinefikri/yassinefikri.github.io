@@ -454,7 +454,7 @@ body{
 }
 @media screen and (max-width: 1000px){
     .end>p{
-        font-size: 13px;
+        font-size: 10px;
     }
     #leftgoup,#rightgoup{
         display: none;
