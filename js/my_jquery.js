@@ -7,11 +7,11 @@ $(document).ready(function(){
 
     // Description Divs Position
     function checkdesc(){
-        if(window.innerWidth<=900){
+        if(window.innerWidth<=950){
             $("#demdesc").insertAfter($("#dempart"));
             $("#pwdesc").insertAfter($("#pwebpart"));
         }
-        if(window.innerWidth>900){
+        if(window.innerWidth>950){
             $("#pwdesc").insertAfter($("#mcpcpart"));
             $("#demdesc").insertAfter($("#mcpcpart"));
         }
@@ -25,7 +25,7 @@ $(document).ready(function(){
     //Resizing Window
     $(window).resize(function(){
         $(".godicon").stop();
-        if(window.innerHeight<=900) $(".godicon").offset({top: window.innerHeight*0.86});
+        if(window.innerHeight<=950) $(".godicon").offset({top: window.innerHeight*0.86});
         else $(".godicon").offset({top: window.innerHeight*0.89});
         godiconrun();
         checkeffects();

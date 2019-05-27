@@ -76,7 +76,7 @@ body{
     color:white;
     background-color:rgba(112, 112, 112, 0.1);
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
 	.menu{
 		width: 0px;
 		height: 0px;
@@ -180,7 +180,7 @@ body{
     height: 100%;
     width: 100%;
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 950px){
     .godicon{
         display: block;
         height: 40px;
@@ -191,7 +191,7 @@ body{
         top: 89vh;
     }
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
     .godicon{
         display: block;
         height: 56px;
@@ -222,7 +222,7 @@ body{
     height: auto;
     font-weight: bold;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
     .partofpart2,.partofpart3,.partofpart4{
         display: block;
         width: auto;
@@ -289,7 +289,7 @@ body{
     background-position: center;
     color:white;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
     .part3content{
         background:linear-gradient(
       rgba(10, 9, 9, 0.9), 
@@ -336,7 +336,7 @@ body{
     color: black;
     font-family: Mid_and_a_Font;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
     .elementofpartofpart3{
         padding:  2% 1%;
     }
@@ -419,7 +419,7 @@ body{
     margin-bottom: 0px;
     margin-top: 2%;
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 950px){
     .techused{
         margin-bottom: 0%;
         margin-top: 3%;
@@ -428,7 +428,7 @@ body{
         margin-bottom: 0%;
     }
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
     .techused{
         display: inline-block;
         margin: 5%;
@@ -450,7 +450,7 @@ body{
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
 	.part5content{
 		font-size: 14px;
 	}
@@ -487,7 +487,7 @@ body{
     width:25px;
     cursor: pointer;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 950px){
     .end>p{
         font-size: 10px;
     }
