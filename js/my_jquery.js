@@ -144,27 +144,8 @@ $(document).ready(function(){
     function setopa(classnameid,fadetime,opa){
         $(classnameid).fadeTo(fadetime,opa);
     }
-    // Progress Bars (Part3)
-    function pbmove(progdiv,lim){
-        var width = 10;
-        var id = setInterval(frame, 10);
-        function frame() {
-            if (width == lim) {
-                clearInterval(id);
-            }
-            else {
-                if(width< lim) width++; 
-                else width--;
-                $(progdiv).width(width + '%'); 
-            }
-        }
-    }
-    // To not Spam ProgressBarMoving
-    var controlpb = new Array(9);
-    for(var i=0;i<9;i++) controlpb[i]=0;
-
     //Divs Effects
-    function myfunction1(classnameid,fadetime,maxopa,minopa){
+    function myfunction(classnameid,fadetime,maxopa,minopa){
     	var xt=$(classnameid).offset().top;
         var xb=xt+$(classnameid).height();
         var wt=$(window).scrollTop();
@@ -177,42 +158,22 @@ $(document).ready(function(){
             setopa(classnameid,fadetime,minopa);
         }
     }
-    function myfunction2(classnameid,percent){
-    	var xt=$("#pb"+classnameid).offset().top;
-        var xb=xt+$("#pb"+classnameid).height();
-        var wt=$(window).scrollTop();
-        var wb=wt+window.innerHeight;
-        var actp= $("#pb"+classnameid).width();
-        if(xt>=wt && xb<=wb && actp!=percent && controlpb[classnameid]==0){
-            pbmove("#pb"+classnameid,percent);
-            controlpb[classnameid]=1;
-        }
-        if(xt>wb || wt>xb && actp!=10 && controlpb[classnameid]==1){
-            pbmove("#pb"+classnameid,10);
-            controlpb[classnameid]=0;
-        }
-    }
-    var sklperc= new Array(9);
-    sklperc[0]=80;
-    sklperc[1]=86;
-    sklperc[2]=75;
-    sklperc[3]=72;
-    sklperc[4]=80;
-    sklperc[5]=75;
-    sklperc[6]=85;
-    sklperc[7]=75;
-    sklperc[8]=85;
-    for(var i=0;i<9;i++){
-        $("#pb"+i).html(sklperc[i]+"%");
-    }
     function multicalls(fadetime){
-        myfunction1('#part2l',fadetime,1,0);
-        myfunction1('#part2m',fadetime,1,0);
-        myfunction1('#part2r',fadetime,1,0);
-        for(var i=0;i<9;i++) myfunction2(i,sklperc[i]);
-        myfunction1('#dem',fadetime,1,0.3);
-        myfunction1('#pweb',fadetime,1,0.3);
-        myfunction1('#mcpc',fadetime,1,0.3);
+        myfunction('#part2l',fadetime,1,0);
+        myfunction('#part2m',fadetime,1,0);
+        myfunction('#part2r',fadetime,1,0);
+        myfunction('#part3l1',fadetime,1,0);
+        myfunction('#part3m1',fadetime,1,0);
+        myfunction('#part3r1',fadetime,1,0);
+        myfunction('#part3l2',fadetime,1,0);
+        myfunction('#part3m2',fadetime,1,0);
+        myfunction('#part3r2',fadetime,1,0);
+        myfunction('#part3l3',fadetime,1,0);
+        myfunction('#part3m3',fadetime,1,0);
+        myfunction('#part3r3',fadetime,1,0); 
+        myfunction('#dem',fadetime,1,0.3);
+        myfunction('#pweb',fadetime,1,0.3);
+        myfunction('#mcpc',fadetime,1,0.3);
     }
     function firsthide(){
         multicalls(0);

@@ -320,27 +320,6 @@ body{
 .partofpart3header{
     margin-bottom: 2%;
 }
-.fullbar {
-    margin: 1% auto;
-    width: 90%;
-    height: 17px;
-    position: relative;
-    background-color: rgb(77, 77, 77);
-    border-radius: 15px;
-}
-.progbar{
-    background-color: #DCDCDC;
-    height: 100%;
-    width: 10%;
-    text-align: center;
-    border-radius: 15px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 20px;
-    line-height: 17px;
-    color: black;
-    font-family: Mid_and_a_Font;
-}
 @media screen and (max-width: 1000px){
     .elementofpartofpart3{
         padding:  2% 1%;
