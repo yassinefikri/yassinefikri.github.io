@@ -266,10 +266,10 @@ body{
     transform: scaleX(1.2);
     transform: scaleY(1.2);
     transform-origin: center;
+    border: 3px black solid;
 }
 .elementofpartofpart2:hover p {
     transform: scaleX(1.05);
-    transform: scaleY(1.05);
 }
 .partofpart2header>p,.partofpart3header>p{
     margin: 1%;
