@@ -28,7 +28,7 @@ $(document).ready(function(){
         if(window.innerHeight<=1000) $(".godicon").offset({top: window.innerHeight*0.86});
         else $(".godicon").offset({top: window.innerHeight*0.89});
         godiconrun();
-        checkhideshow();
+        checkeffects();
         checkdesc();
     })
 
@@ -112,26 +112,6 @@ $(document).ready(function(){
     }
     godiconrun();
 
-    //Part 3 eff
-    $("#part3l1,#part3l2,#part3l3,#part3m1,#part3m2,#part3m3,#part3r1,#part3r2,#part3r3").mouseover(function(){
-        $(this).children().addClass("part3eff");
-    });
-    $("#part3l1,#part3l2,#part3l3,#part3m1,#part3m2,#part3m3,#part3r1,#part3r2,#part3r3").mouseout(function(){
-        $(this).children().removeClass("part3eff");
-    });
-
-    //Pics eff
-    $("#dem,#pweb,#mcpc").mouseenter(function(){
-        $(this).animate({opacity : 0.3},200);
-  
-    });
-    $("#dem,#pweb,#mcpc").mouseleave(function(){
-        $(this).animate({opacity : 1},200);
-    });
-
-    //Enable / Disable show hide
-    var enablepart4=1;
-
     //Description Divs show Hide
     function hideshowdesc(main,second1,second2){
         if($(main).css("display")=="none"){
@@ -149,9 +129,6 @@ $(document).ready(function(){
             if(window.innerWidth>1000) $('html, body').animate({scrollTop: $("#part4").offset().top-100}, 1000);
             else $('html, body').animate({scrollTop: $(main).prev().offset().top-200}, 1000);
         }
-        show("#demp",0);
-        show("#pweb",0);
-        show("#mcpcp",0);
     }
     $("#mcpcp").click(function(){
         hideshowdesc("#mcpcvidcont","#pwdesc","#demdesc");
@@ -163,45 +140,79 @@ $(document).ready(function(){
         hideshowdesc("#demdesc","#mcpcvidcont","#pwdesc");
     });
 
-    //Auto Hide & Show Parts
-    function show(classnameid,fadetime){
-        $(classnameid).fadeTo(fadetime,1);
+    //Auto Hide & Show Parts (Part2 && Part4)
+    function setopa(classnameid,fadetime,opa){
+        $(classnameid).fadeTo(fadetime,opa);
     }
-    function hide(classnameid,fadetime){
-        $(classnameid).fadeTo(fadetime,0);
+    // Progress Bars (Part3)
+    function pbmove(progdiv,lim){
+        var width = 10;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width == lim) {
+                clearInterval(id);
+            }
+            else {
+                if(width< lim) width++; 
+                else width--;
+                $(progdiv).width(width + '%'); 
+            }
+        }
     }
+    // To not Spam ProgressBarMoving
+    var controlpb = new Array(9);
+    for(var i=0;i<9;i++) controlpb[i]=0;
 
-    function myfunction(classnameid,fadetime){
+    //Divs Effects
+    function myfunction1(classnameid,fadetime,maxopa,minopa){
     	var xt=$(classnameid).offset().top;
         var xb=xt+$(classnameid).height();
         var wt=$(window).scrollTop();
         var wb=wt+window.innerHeight;
         var opa=$(classnameid).css("opacity");
-        if(xt>=wt && xb<=wb && opa==0){
-            show(classnameid,fadetime);
+        if(xt>=wt && xb<=wb && opa==minopa){
+            setopa(classnameid,fadetime,maxopa);
         }
-        if((xt>wb || wt>xb) && opa==1){
-            hide(classnameid,fadetime);
+        if((xt>wb || wt>xb) && opa==maxopa){
+            setopa(classnameid,fadetime,minopa);
         }
     }
-    function multicalls(fadetime){
-        myfunction('#part2l',fadetime);
-        myfunction('#part2m',fadetime);
-        myfunction('#part2r',fadetime);
-        myfunction('#part3l1',fadetime);
-        myfunction('#part3m1',fadetime);
-        myfunction('#part3r1',fadetime);
-        myfunction('#part3l2',fadetime);
-        myfunction('#part3m2',fadetime);
-        myfunction('#part3r2',fadetime);
-        myfunction('#part3l3',fadetime);
-        myfunction('#part3m3',fadetime);
-        myfunction('#part3r3',fadetime); 
-        if(enablepart4==1){  
-            myfunction('#demp',fadetime);
-            myfunction('#pwebp',fadetime);
-            myfunction('#mcpcp',fadetime);
+    function myfunction2(classnameid,percent){
+    	var xt=$("#pb"+classnameid).offset().top;
+        var xb=xt+$("#pb"+classnameid).height();
+        var wt=$(window).scrollTop();
+        var wb=wt+window.innerHeight;
+        var actp= $("#pb"+classnameid).width();
+        if(xt>=wt && xb<=wb && actp!=percent && controlpb[classnameid]==0){
+            pbmove("#pb"+classnameid,percent);
+            controlpb[classnameid]=1;
         }
+        if(xt>wb || wt>xb && actp!=10 && controlpb[classnameid]==1){
+            pbmove("#pb"+classnameid,10);
+            controlpb[classnameid]=0;
+        }
+    }
+    var sklperc= new Array(9);
+    sklperc[0]=80;
+    sklperc[1]=86;
+    sklperc[2]=75;
+    sklperc[3]=72;
+    sklperc[4]=80;
+    sklperc[5]=75;
+    sklperc[6]=85;
+    sklperc[7]=75;
+    sklperc[8]=85;
+    for(var i=0;i<9;i++){
+        $("#pb"+i).html(sklperc[i]+"%");
+    }
+    function multicalls(fadetime){
+        myfunction1('#part2l',fadetime,1,0);
+        myfunction1('#part2m',fadetime,1,0);
+        myfunction1('#part2r',fadetime,1,0);
+        for(var i=0;i<9;i++) myfunction2(i,sklperc[i]);
+        myfunction1('#dem',fadetime,1,0.3);
+        myfunction1('#pweb',fadetime,1,0.3);
+        myfunction1('#mcpc',fadetime,1,0.3);
     }
     function firsthide(){
         multicalls(0);
@@ -209,11 +220,10 @@ $(document).ready(function(){
     $(window).scroll(function(){
         multicalls(500);
     });
-    function checkhideshow(){
+    function checkeffects(){
         multicalls(500);
     }
-    setInterval(checkhideshow,200);
     firsthide();
-    checkhideshow();
+    checkeffects();
     //End
 });

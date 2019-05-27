@@ -3,7 +3,6 @@
 |      author : Yassine Fikri     |
 ---------------------------------*/
 
-
 /*Font*/
 @font-face {
     font-family: TxtF;
@@ -42,12 +41,7 @@ body{
 }
 /*End Of General*/
 
-#part1cont{
-    position: relative;
-}
-
-
-/* Menu Color*/
+/* Menu */
 .menubg{
 	background-color: rgb(14, 13, 13);
 }
@@ -57,23 +51,8 @@ body{
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-/*End of Menu Color*/
-
-/*Part 1*/
 .mobmenu{
     display: none;
-}
-.part1{
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top:0;
 }
 .menu{
     position: fixed;
@@ -97,7 +76,6 @@ body{
     color:white;
     background-color:rgba(112, 112, 112, 0.1);
 }
-
 @media screen and (max-width: 1000px){
 	.menu{
 		width: 0px;
@@ -123,7 +101,6 @@ body{
         margin: 2%;
     }
 }
-
 .mobmenuopened{
     height: 100vh;
     width: 100%;
@@ -144,7 +121,24 @@ body{
     padding: 2%;
     border-bottom: 1px solid white;
 }
+/*End of Menu Color*/
 
+/*Part 1*/
+#part1cont{
+    position: relative;
+}
+.part1{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+}
 .part1mid{
     height: auto;
     width: 100%;
@@ -175,7 +169,6 @@ body{
     letter-spacing: 10px;
     color: rgb(255, 255, 255);
 }
-
 .godicon{
     display: none;
     position: absolute;
@@ -251,7 +244,7 @@ body{
     }
 }
 .elementofpartofpart2,.elementofpartofpart3,.elementofpartofpart4{
-    margin: 2% 15%;
+    margin: 2% 10%;
     text-align: center;
     border: 2px black solid;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -263,13 +256,12 @@ body{
 .elementofpartofpart2:hover{
     margin: 1% 10%;
     transition:0.5s;
-    transform: scaleX(1.2);
-    transform: scaleY(1.2);
+    transform: scaleX(1.1) scaleY(1.1);
     transform-origin: center;
     border: 3px black solid;
 }
 .elementofpartofpart2:hover p {
-    transform: scaleX(1.05);
+    transform: scaleX(1.05) scaleY(1.05);
 }
 .partofpart2header>p,.partofpart3header>p{
     margin: 1%;
@@ -318,19 +310,48 @@ body{
     height: auto;
     margin: 1% 0%;
 }
-.elementofpartofpart3,.elementofpartofpart4{
+.elementofpartofpart3{
     border: 2px white solid;
     padding: 3% 1%;
 }
-.part3eff{
-    background-color: rgba(68, 68, 68, 0.432);
+.elementofpartofpart3:hover{
+    background-color: rgba(68, 68, 68, 0.3);
+}
+.partofpart3header{
+    margin-bottom: 2%;
+}
+.fullbar {
+    margin: 1% auto;
+    width: 90%;
+    height: 17px;
+    position: relative;
+    background-color: rgb(77, 77, 77);
+    border-radius: 15px;
+}
+.progbar{
+    background-color: #DCDCDC;
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 17px;
+    color: black;
+    font-family: Mid_and_a_Font;
+}
+@media screen and (max-width: 1000px){
+    .elementofpartofpart3{
+        padding:  2% 1%;
+    }
 }
 /*End Of Part3*/
 
 /*Part 4*/
-
 .elementofpartofpart4{
     padding: 2% 0%;
+    border: 0px;
 }
 .part4imgcont{
     margin: auto;
@@ -351,7 +372,6 @@ body{
 .partofpart4content{
     font-size: 21px;
     margin: auto;
-    /*text-align: center;*/
 }
 #mcpcvidcont{
     background-color: #DCDCDC;
@@ -419,6 +439,11 @@ body{
         margin: 5%;
     }
 }
+.part4imgcont:hover{
+    transition:0.5s;
+    transform: scaleX(1.05) scaleY(1.05);
+    transform-origin: center;
+}
 /*End of Part 4*/
 
 /*Part 5*/
@@ -475,3 +500,4 @@ body{
         display: none;
     }
 }
+/* End */
