@@ -437,6 +437,9 @@ body{
 .part5content>p{
     padding: 6px 10%;
 }
+.part5header{
+    border-bottom: 2px solid rgb(41, 41, 41);
+}
 /*End of Part 5*/
 
 .end{
