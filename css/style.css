@@ -202,9 +202,10 @@ body{
         top: 86vh;
     }
 }
-@media screen and (max-height: 850px){
+@media screen and (max-height: 850px) and (min width: 1000px){
     .godicon{
-        display: none;
+    	height: 30px;
+    	width: 30px;
     }
 }
 /*End Of Part1*/
