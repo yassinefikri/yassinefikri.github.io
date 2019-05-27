@@ -3,9 +3,9 @@
 |           author : Yassine Fikri           |
 --------------------------------------------*/
 
-var nstar= 300; // Set the Number of Stars , default [300]
-var backgroundcolor= "radial-gradient(#000000,#090c12)"; // Set Background Color default["radial-gradient(#000000,#090c12)"]
-var starsz = 0.045 // Set stars size increase , default [0.045]
+var nstar= 300;
+var backgroundcolor= "radial-gradient(#000000,#090c12)";
+var starsz = 0.045;
 
 var canvas= document.querySelector("canvas");
 var ww= document.body.clientWidth; 
