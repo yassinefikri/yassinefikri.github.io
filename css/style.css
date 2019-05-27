@@ -76,7 +76,7 @@ body{
     color:white;
     background-color:rgba(112, 112, 112, 0.1);
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
 	.menu{
 		width: 0px;
 		height: 0px;
@@ -180,7 +180,7 @@ body{
     height: 100%;
     width: 100%;
 }
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 800px){
     .godicon{
         display: block;
         height: 40px;
@@ -191,7 +191,7 @@ body{
         top: 89vh;
     }
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
     .godicon{
         display: block;
         height: 56px;
@@ -200,11 +200,6 @@ body{
         border: 3px solid white;
         border-radius: 50%;
         top: 86vh;
-    }
-}
-@media screen and (max-height: 850px){
-    .godicon{
-        display: none;
     }
 }
 /*End Of Part1*/
@@ -227,7 +222,7 @@ body{
     height: auto;
     font-weight: bold;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
     .partofpart2,.partofpart3,.partofpart4{
         display: block;
         width: auto;
@@ -294,7 +289,7 @@ body{
     background-position: center;
     color:white;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
     .part3content{
         background:linear-gradient(
       rgba(10, 9, 9, 0.9), 
@@ -341,7 +336,7 @@ body{
     color: black;
     font-family: Mid_and_a_Font;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
     .elementofpartofpart3{
         padding:  2% 1%;
     }
@@ -424,7 +419,7 @@ body{
     margin-bottom: 0px;
     margin-top: 2%;
 }
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 800px){
     .techused{
         margin-bottom: 0%;
         margin-top: 3%;
@@ -433,7 +428,7 @@ body{
         margin-bottom: 0%;
     }
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
     .techused{
         display: inline-block;
         margin: 5%;
@@ -455,7 +450,7 @@ body{
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
 	.part5content{
 		font-size: 14px;
 	}
@@ -492,7 +487,7 @@ body{
     width:25px;
     cursor: pointer;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
     .end>p{
         font-size: 10px;
     }
