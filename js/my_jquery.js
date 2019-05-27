@@ -76,33 +76,23 @@ $(document).ready(function(){
     //Menu Click Moving
     $('#mn1').click(function(){
         menuclickclassremove();
-        $('html, body').animate({
-            scrollTop: $("#part1").offset().top-50
-        }, 1000);
+        $('html, body').animate({scrollTop: $("#part1").offset().top-50}, 1000);
     })
     $('#mn2').click(function(){
         menuclickclassremove();
-        $('html, body').animate({
-            scrollTop: $("#part2").offset().top-50
-        }, 1000);
+        $('html, body').animate({scrollTop: $("#part2").offset().top-50}, 1000);
     })
     $('#mn3').click(function(){
         menuclickclassremove();
-        $('html, body').animate({
-            scrollTop: $("#part3").offset().top-50
-        }, 1000);
+        $('html, body').animate({scrollTop: $("#part3").offset().top-50}, 1000);
     })
     $('#mn4').click(function(){
         menuclickclassremove();
-        $('html, body').animate({
-            scrollTop: $("#part4").offset().top-50
-        }, 1000);
+        $('html, body').animate({scrollTop: $("#part4").offset().top-50}, 1000);
     })
     $('#mn5').click(function(){
         menuclickclassremove();
-        $('html, body').animate({
-            scrollTop: $("#part5").offset().top-50
-        }, 1000);
+        $('html, body').animate({scrollTop: $("#part5").offset().top-50}, 1000);
     })
 
     //Part 1 Arrow
@@ -151,7 +141,6 @@ $(document).ready(function(){
     var enablepart4=1;
 
     //Description Divs show Hide
-
     function hideshowdesc(main,second1,second2){
         if($(main).css("display")=="none"){
             if($(second1).css("display")!="none") $(second1).fadeOut(400);
@@ -159,10 +148,14 @@ $(document).ready(function(){
             if(main=="#mcpcvidcont") $("#mcpcvid").attr('src','https://www.youtube.com/embed/UL7QOMiLzdU');
             if(main!="#mcpcvidcont") $("#mcpcvid").attr('src','');
             $(main).fadeIn(1200);
+            if(window.innerWidth>1000) $('html, body').animate({scrollTop: $("#part4").offset().top+$(".partofpart4").height()}, 1000);
+            else $('html, body').animate({scrollTop: $(main).offset().top-$(main).height()*2/3}, 1000);
         }
         else{
             $(main).fadeOut(1000);
             if(main=="#mcpcvidcont") $("#mcpcvid").attr('src','');
+            if(window.innerWidth>1000) $('html, body').animate({scrollTop: $("#part4").offset().top-100}, 1000);
+            else $('html, body').animate({scrollTop: $(main).prev().offset().top-200}, 1000);
         }
         show("#demp",0);
         show("#pweb",0);
@@ -227,7 +220,7 @@ $(document).ready(function(){
     function checkhideshow(){
         multicalls(500);
     }
-    setInterval(checkhideshow,500);
+    setInterval(checkhideshow,200);
     firsthide();
     checkhideshow();
     //End
