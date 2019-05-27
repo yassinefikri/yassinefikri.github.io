@@ -260,6 +260,17 @@ body{
 .elementofpartofpart2{
     padding: 7px;
 }
+.elementofpartofpart2:hover{
+    margin: 1% 10%;
+    transition:0.5s;
+    transform: scaleX(1.3);
+    transform: scaleY(1.3);
+    transform-origin: center;
+}
+.elementofpartofpart2:hover p {
+    transform: scaleX(1.05);
+    transform: scaleY(1.05);
+}
 .partofpart2header>p,.partofpart3header>p{
     margin: 1%;
     padding: 2% 0%;

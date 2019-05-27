@@ -112,14 +112,6 @@ $(document).ready(function(){
     }
     godiconrun();
 
-    //Part 2 Eff
-    $(".elementofpartofpart2").mouseenter(function(){
-        $(this).animate({ 'zoom': 1.3 }, 200);
-    })
-    $(".elementofpartofpart2").mouseleave(function(){
-        $(this).animate({'zoom': 1 }, 200);
-    })
-
     //Part 3 eff
     $("#part3l1,#part3l2,#part3l3,#part3m1,#part3m2,#part3m3,#part3r1,#part3r2,#part3r3").mouseover(function(){
         $(this).children().addClass("part3eff");
