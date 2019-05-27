@@ -204,8 +204,8 @@ body{
 }
 @media screen and (max-height: 850px) and (min width: 1000px){
     .godicon{
-    	height: 30px;
-    	width: 30px;
+    	height: 25px;
+    	width: 25px;
     }
 }
 /*End Of Part1*/
