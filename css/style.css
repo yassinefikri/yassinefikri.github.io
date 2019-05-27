@@ -415,7 +415,8 @@ body{
 }
 @media screen and (max-width: 1000px){
     .techused{
-        display: block;
+        display: inline-block;
+        margin: 5%;
     }
 }
 /*End of Part 4*/
