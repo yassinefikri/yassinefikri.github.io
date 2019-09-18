@@ -313,6 +313,14 @@ body{
     margin: 1%;
     padding: 2% 0%;
 }
+@media (hover:none), (hover:on-demand){
+	.partofpart2header>p{
+    	font-size: 40px;
+	}
+	.partofpart2content>p{
+		font-size: 30px;
+	}
+}
 /*End of Pärt2*/
 
 /*Part3*/
