@@ -31,6 +31,14 @@ a{
 a:hover{
     color: white;
 }
+h1{
+    font-size: 48px;
+    font-weight: inherit;
+}
+h2{
+    font-size: 27px;
+    font-weight: inherit;
+}
 h3{
     font-size: 40px;
     text-align: center;
@@ -111,15 +119,29 @@ body{
     opacity: 0.95;
     z-index: 1;
 }
-.mobmenuopenedlu{
+.mobmenuopened ul{
     padding: 20% 10%;
     list-style-type: none;
 }
-.mobmenuopenedli{
-    font-size: 55px;
+.mobmenuopened li{
+    font-size: 30px;
     color: white;
     padding: 2%;
     border-bottom: 1px solid white;
+    cursor: pointer;
+}
+@media (hover:none), (hover:on-demand){
+    .mobmenuopened ul{
+        padding: 20% 10%;
+        list-style-type: none;
+    }
+    .mobmenuopened li{
+        font-size: 55px;
+        color: white;
+        padding: 2%;
+        border-bottom: 1px solid white;
+        cursor: pointer;
+    }
 }
 /*End of Menu Color*/
 
@@ -162,7 +184,7 @@ body{
     text-align: center;
     letter-spacing: 33px;
 }
-.h1mid>p,.h2mid>p{
+.h1mid>h1,.h2mid>h2{
     font-family: Mid_and_a_Font;
 }
 .h2mid{
@@ -179,10 +201,6 @@ body{
 .godicon>img{
     cursor: pointer;
 }
-#arr{
-    height: 100%;
-    width: 100%;
-}
 @media screen and (min-width: 1000px){
     .godicon{
         display: block;
@@ -197,6 +215,17 @@ body{
 @media screen and (max-width: 1000px){
     .godicon{
         display: block;
+    	height: 25px;
+        width: 25px;
+        top: 86vh;
+        padding: 1px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+}
+@media (hover:none), (hover:on-demand){ 
+    .godicon{
+        display: block;
         height: 56px;
         width: 56px;
         padding: 2px;
@@ -205,31 +234,42 @@ body{
         top: 86vh;
     }
 }
-@media screen and (max-height: 850px) and (min width: 1000px){
-    .godicon{
-    	height: 25px;
-    	width: 25px;
-    }
+#arr{
+    height: 100%;
+    width: 100%;
 }
 /*End Of Part1*/
 
 /*Part2*/
 #part2{
     width: 100%;
+    padding-bottom: 5%; 
 }
-.partsofpart2cont{
+.partsofpart2cont,.partsofpart4cont,.part3row{
     width: 100%;
-    display: block;
+    /*display: block;*/
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
-.part2header,.part4header{
-    padding-top: 5%; 
+@media screen and (max-width: 1000px){
+    .partsofpart2cont,.partsofpart4cont,.part3row{
+        display: block;
+    }
+}
+.part2header{
+    padding: 5% 0%;
 }
 .partofpart2,.partofpart3,.partofpart4{
-    width: 33%;
     margin: 5% 0%;;
     display: inline-block;
     height: auto;
     font-weight: bold;
+}
+.partofpart2,.partofpart4,.partofpart3{
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0%;
 }
 @media screen and (max-width: 1000px){
     .partofpart2,.partofpart3,.partofpart4{
@@ -240,8 +280,8 @@ body{
     .partofpart4{
         margin: 5%;
     }
-    .partsofpart2cont,.partsofpart4cont{
-        margin-top: 15%;
+    .partsofpart4cont{
+        margin-top: 10%;
     }
     .part2header,.part4header{
         padding-top: 10%; 
@@ -255,17 +295,13 @@ body{
     vertical-align: middle;
 }
 .elementofpartofpart2{
+    position: relative;
+    margin: 0% 10%;
     padding: 7px;
-}
-.elementofpartofpart2:hover{
-    margin: 1% 10%;
-    transition:0.5s;
-    transform: scaleX(1.1) scaleY(1.1);
-    transform-origin: center;
-    border: 3px black solid;
-}
-.elementofpartofpart2:hover p {
-    transform: scaleX(1.05) scaleY(1.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .partofpart2header>p,.partofpart3header>p{
     margin: 1%;
@@ -281,11 +317,16 @@ body{
 
 /*Part3*/
 .part3header,.part5header{
-    height: 122px;
+    padding: 2% 0%;
     width: 100%;
     text-align: center;
     background-color: rgb(14, 13, 13);
     color:white;
+}
+@media screen and (max-width: 1000px){
+    .part3header,.part5header{
+        padding: 5% 0%;
+    }
 }
 .part3content{
     background:linear-gradient(
@@ -332,9 +373,17 @@ body{
 /*End Of Part3*/
 
 /*Part 4*/
+@media screen and (min-width: 1000px){
+    .part4header{
+        padding: 5% 0%;
+    }
+}
 .elementofpartofpart4{
     padding: 2% 0%;
     border: 0px;
+}
+.partofpart4{
+    margin-bottom: 4%;
 }
 .part4imgcont{
     margin: auto;
@@ -467,6 +516,7 @@ body{
     height: 25px;
     width:25px;
     cursor: pointer;
+    position: relative;
 }
 #rightgoup{
     float: right;
@@ -474,6 +524,7 @@ body{
     height: 25px;
     width:25px;
     cursor: pointer;
+    position: relative;
 }
 @media screen and (max-width: 1000px){
     .end>p{

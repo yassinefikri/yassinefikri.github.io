@@ -25,8 +25,16 @@ $(document).ready(function(){
     //Resizing Window
     $(window).resize(function(){
         $(".godicon").stop();
-        if(window.innerHeight<=1000) $(".godicon").offset({top: window.innerHeight*0.86});
-        else $(".godicon").offset({top: window.innerHeight*0.89});
+        if(window.innerHeight<=1000) {
+            $(".godicon").offset({top: window.innerHeight*0.86});
+            if($('#menu').hasClass('mobmenuopened')){
+                menuclickclassremove();
+                $('#menu').addClass('menu');
+            }
+        }
+        else {
+            $(".godicon").offset({top: window.innerHeight*0.89});
+        }
         godiconrun();
         checkeffects();
         checkdesc();
@@ -51,22 +59,24 @@ $(document).ready(function(){
         $(this).toggleClass('open');
         $("#menu").toggleClass("menu");
         $("#menu").toggleClass("mobmenuopened");
-        $("#menu>ul>li").toggleClass("mobmenuopenedli");
-        $("#menu>ul").toggleClass("mobmenuopenedlu");
-        if(!$("#hamb").hasClass("is-active")){
-        }
     })
 
     //Menu Resest After Click on Menu Element
     function menuclickclassremove(){
         if($("#menu").hasClass("mobmenuopened")){
             $("#menu").removeClass("mobmenuopened");
-            $("#menu>ul>li").removeClass("mobmenuopenedli");
-            $("#menu>ul").removeClass("mobmenuopenedlu");
             $("#menu").addClass("menu");
             $("#hamb").toggleClass('open');
         }
     }
+
+    //Part 2 Divs Animation
+    $('.elementofpartofpart2').mouseenter(function(){
+        $(this).animate({top : "-=10"},200,"swing");
+    })
+    $('.elementofpartofpart2').mouseleave(function(){
+        $(this).animate({top : "+=10"},200,"swing");
+    })
 
     //Bottom Pics
     $('.end>img').click(function(){
@@ -111,6 +121,14 @@ $(document).ready(function(){
         upper(window.innerHeight/30,2000);
     }
     godiconrun();
+
+    //Last 2 Arrows
+    $('#leftgoup,#rightgoup').mouseenter(function(){
+        $(this).animate({top : "-=5"},500,"swing");
+    })
+    $('#leftgoup,#rightgoup').mouseleave(function(){
+        $(this).animate({top : "+=5"},500,"swing");
+    })
 
     //Description Divs show Hide
     function hideshowdesc(main,second1,second2){
