@@ -398,8 +398,8 @@ body{
     border: 3px solid black;
     padding-bottom: 0px;
     margin-bottom: 5%;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     font-size: 0;
     position: relative;
 }
