@@ -1,11 +1,13 @@
-/*-------------------------------------------|
-|      Space Moving Background Animation     |
-|           author : Yassine Fikri           |
---------------------------------------------*/
+/*-----------------------------------------------------------------------------|
+|                      Space Moving Background Animation                       |
+|                           Author : Yassine Fikri                             |
+|               MIT license: http://opensource.org/licenses/MIT                |
+|          More Works : https://github.com/yassinefikri/js_animations          |
+------------------------------------------------------------------------------*/
 
-var nstar= 300;
-var backgroundcolor= "radial-gradient(#000000,#090c12)";
-var starsz = 0.045;
+var nstar= 300; // Set the Number of Stars , default [300]
+var backgroundcolor= "radial-gradient(#000000,#090c12)"; // Set Background Color default["radial-gradient(#000000,#090c12)"]
+var starsz = 0.045 // Set stars size increase , default [0.045]
 
 var canvas= document.querySelector("canvas");
 var ww= document.body.clientWidth; 
@@ -28,6 +30,20 @@ function Star(){
         this.dx= (this.posx-ww/2)/50;
         this.dy= (this.posy-wh/2)/50;
         this.dr=starsz;
+        if(Math.abs(this.dx)<3 && Math.abs(this.dy)<3){
+            if(this.dx<0){
+                this.dx-=3;
+            }
+            else{
+                this.dx+=3;
+            }
+            if(this.dy<0){
+                this.dy-=3;
+            }
+            else{
+                this.dy+=3;
+            }
+        }
     }
     this.draw= function(){
         c.beginPath();
