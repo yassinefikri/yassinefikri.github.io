@@ -206,7 +206,7 @@ body{
         display: block;
         height: 40px;
         width: 40px;
-        padding: 1px;
+        padding: 2px;
         border: 2px solid white;
         border-radius: 50%;
         top: 89vh;
@@ -218,7 +218,7 @@ body{
     	height: 25px;
         width: 25px;
         top: 86vh;
-        padding: 1px;
+        padding: 2px;
         border: 2px solid white;
         border-radius: 50%;
     }
@@ -228,7 +228,7 @@ body{
         display: block;
         height: 56px;
         width: 56px;
-        padding: 2px;
+        padding: 4px;
         border: 3px solid white;
         border-radius: 50%;
         top: 86vh;
@@ -501,10 +501,25 @@ body{
 	}
 }
 .part5content>p{
+    text-align: center;
     padding: 6px 10%;
 }
 .part5header{
     border-bottom: 2px solid rgb(41, 41, 41);
+}
+.links{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 35%;
+}
+.link{
+    max-width: 50px;
+    max-height: 50px;
+}
+.link img{
+    max-width: 100%;
+    max-height: 100%;
 }
 /*End of Part 5*/
 
