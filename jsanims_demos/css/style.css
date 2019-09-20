@@ -1,0 +1,39 @@
+@font-face {
+    font-family: TxtF;
+    src: url(../../fonts/ABeeZee/ABeeZee-Regular.ttf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a,p{
+    text-decoration: none;
+    color: white;
+}
+body{
+    overflow: hidden;
+}
+.infos{
+    padding: 1%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    opacity: 1;
+    font-size: 30px;
+    font-family: TxtF;
+}
+img{
+    height: 30px;
+    width: 30px;
+}
+@media (hover:none), (hover:on-demand){
+    .infos{
+        font-size: 50px;
+    }
+    img{
+        height: 50px;
+        width: 50px;
+    }
+}
