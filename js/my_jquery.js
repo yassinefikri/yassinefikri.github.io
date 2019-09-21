@@ -8,17 +8,17 @@ $(document).ready(function(){
     // Description Divs Position
     function checkdesc(){
         if(window.innerWidth<=1000){
-            $("#demdesc").insertAfter($("#dempart"));
+            $("#candesc").insertAfter($("#canpart"));
             $("#pwdesc").insertAfter($("#pwebpart"));
         }
         if(window.innerWidth>1000){
             $("#pwdesc").insertAfter($("#mcpcpart"));
-            $("#demdesc").insertAfter($("#mcpcpart"));
+            $("#candesc").insertAfter($("#mcpcpart"));
         }
     }
     checkdesc();
     // Hide Description Divs
-    $("#demdesc").fadeOut(0);
+    $("#candesc").fadeOut(0);
     $("#pwdesc").fadeOut(0);
     $("#mcpcvidcont").fadeOut(0);
 
@@ -38,6 +38,8 @@ $(document).ready(function(){
         godiconrun();
         checkeffects();
         checkdesc();
+        resize1();
+        resize();
     })
 
     //Menu Background Color
@@ -149,13 +151,13 @@ $(document).ready(function(){
         }
     }
     $("#mcpcp").click(function(){
-        hideshowdesc("#mcpcvidcont","#pwdesc","#demdesc");
+        hideshowdesc("#mcpcvidcont","#pwdesc","#candesc");
     });
     $("#pwebp").click(function(){
-        hideshowdesc("#pwdesc","#mcpcvidcont","#demdesc");
+        hideshowdesc("#pwdesc","#mcpcvidcont","#candesc");
     });
-    $("#demp").click(function(){
-        hideshowdesc("#demdesc","#mcpcvidcont","#pwdesc");
+    $("#canp").click(function(){
+        hideshowdesc("#candesc","#mcpcvidcont","#pwdesc");
     });
 
     //Auto Hide & Show Parts (Part2 && Part4)
@@ -189,9 +191,9 @@ $(document).ready(function(){
         myfunction('#part3l3',fadetime,1,0);
         myfunction('#part3m3',fadetime,1,0);
         myfunction('#part3r3',fadetime,1,0); 
-        myfunction('#dem',fadetime,1,0.3);
+        /*myfunction('#dem',fadetime,1,0.3);
         myfunction('#pweb',fadetime,1,0.3);
-        myfunction('#mcpc',fadetime,1,0.3);
+        myfunction('#mcpc',fadetime,1,0.3);*/
     }
     function firsthide(){
         multicalls(0);
