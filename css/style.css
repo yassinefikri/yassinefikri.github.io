@@ -338,8 +338,8 @@ body{
 }
 .part3content{
     background:linear-gradient(
-      rgba(10, 9, 9, 0.9), 
-      rgba(10, 9, 9, 0.9)),
+      rgba(10, 9, 9, 0.5), 
+      rgba(10, 9, 9, 0.5)),
       url("../images/sk.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
