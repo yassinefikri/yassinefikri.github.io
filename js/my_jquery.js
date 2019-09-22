@@ -74,9 +74,11 @@ $(document).ready(function(){
 
     //Part 2 Divs Animation
     $('.elementofpartofpart2').mouseenter(function(){
+    	$(this).finish();
         $(this).animate({top : "-=10"},200,"swing");
     })
     $('.elementofpartofpart2').mouseleave(function(){
+    	$(this).finish();
         $(this).animate({top : "+=10"},200,"swing");
     })
 
