@@ -174,3 +174,9 @@ function animate(){
     }
 }
 animate();
+function resize() {
+    size();
+    for(var i=0;i<nmis;i++) {
+        miss[i].init();
+    }
+}
