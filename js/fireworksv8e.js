@@ -36,7 +36,7 @@ function size(){
     canvas.height=ch;
     canvas.width=cw;
 }
-var canvas = document.querySelector("canvas");
+var canvas= document.getElementById("can2");
 canvas.style.backgroundImage= bgcolor;
 var c= canvas.getContext("2d");
 size();
