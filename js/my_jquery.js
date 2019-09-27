@@ -41,6 +41,9 @@ $(document).ready(function(){
         resize1();
         resize();
     })
+    if($('#can2').height()==0){
+    	size();
+    }
 
     //Menu Background Color
     function menubackgfunction(){
