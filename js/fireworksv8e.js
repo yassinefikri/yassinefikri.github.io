@@ -10,8 +10,8 @@
 var npar = 50;  //Set Number of Particules per Firework default[50]
 var parsize = 2;  //Set Size of Particules default[2]
 var nmis = 4;  //Set Number of Fireworks default[4]
-var missize = 3;  //Set Size of Fireworks default[3]
-var mislen = 0.01;  //Firework Height default[0.01]
+var missize = 2;  //Set Size of Fireworks default[3]
+var mislen = 2;  //Firework Height default[0.01]
 var multicolmis = 0;  //Mono Color Firework [0] | Multi Color Firework [1]
 var gravity = 0.01  //Gravity default[0.01]
 var bgcolor = "linear-gradient(180deg, rgba(0,0,0,1) 24%, rgba(10,1,17,1) 47%, rgba(2,9,32,1) 73%)"; //Set The Background
