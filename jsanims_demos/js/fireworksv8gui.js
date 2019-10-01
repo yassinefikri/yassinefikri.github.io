@@ -26,10 +26,10 @@ var guival={
 var miss;
 var active = true;
 //Set Random Colors to Fireworks
-function getRandomColor() {
+function getRandomColor(){
     var values='0123456789ABCDEF';
     var color='#';
-    for (var i=0;i<6;i++) {
+    for (var i=0;i<6;i++){
         color+=values[Math.floor(Math.random()*16)];
     }
     return color;
@@ -84,9 +84,7 @@ function partc(){
 function mis(color){
     //Initialisation of Particules for A Firework 
     this.partcs= [];
-    //this.partcs = new Array(values.npar);
     for(var i=0;i<values.npar;i++) {
-        //this.partcs[i]= new partc();
         this.partcs.push(new partc());
         this.partcs[i].init(color);
     }
@@ -111,7 +109,7 @@ function mis(color){
             c.lineWidth=values.missize;
             c.strokeStyle="white";
             c.moveTo(this.posx,this.posy);
-            c.lineTo(this.lastposx,this.lastposy+values.mislen*this.dy/100);
+            c.lineTo(this.lastposx,this.lastposy+values.mislen*100/wh);
             c.stroke();
         }
     }
@@ -167,8 +165,7 @@ function createFireworks(){
     miss= [];
     //miss= new Array(values.nmis);
     for(var i=0;i<values.nmis;i++){
-        //miss[i]=new mis(getRandomColor());
-        miss.push(new mis(getRandomColor()))
+        miss.push(new mis(getRandomColor()));
         miss[i].init();
     }
 }
@@ -203,7 +200,7 @@ window.onload= function(){
     var fold2= gui.addFolder('Firework Particules');
     fold2.open();
     fold1.add(guival,'Multi_Color_Missile').onChange(setValue);
-    fold1.add(guival,'Missile_Length',0.1,2).onChange(setValue);
+    fold1.add(guival,'Missile_Length',1,100).onChange(setValue);
     fold1.add(guival,'Missile_Size',2,4).onChange(setValue);
     fold1.add(guival,'Max_Missiles',1,20).onChange(setValue);
     fold2.add(guival,'Particules_Per_Missile',10,100).onChange(setValue);
