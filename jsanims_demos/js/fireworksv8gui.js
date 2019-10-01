@@ -163,7 +163,6 @@ function mis(color){
 //Creating Fireworks
 function createFireworks(){
     miss= [];
-    //miss= new Array(values.nmis);
     for(var i=0;i<values.nmis;i++){
         miss.push(new mis(getRandomColor()));
         miss[i].init();
@@ -202,8 +201,8 @@ window.onload= function(){
     fold1.add(guival,'Multi_Color_Missile').onChange(setValue);
     fold1.add(guival,'Missile_Length',1,100).onChange(setValue);
     fold1.add(guival,'Missile_Size',2,4).onChange(setValue);
-    fold1.add(guival,'Max_Missiles',1,20).onChange(setValue);
-    fold2.add(guival,'Particules_Per_Missile',10,100).onChange(setValue);
+    fold1.add(guival,'Max_Missiles',1,20,1).onChange(setValue);
+    fold2.add(guival,'Particules_Per_Missile',10,100,1).onChange(setValue);
     fold2.add(guival,'Pärticules_Size',1,4).onChange(setValue);
 }
 function setValue(){
