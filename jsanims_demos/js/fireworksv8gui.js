@@ -192,7 +192,6 @@ function resize() {
     createFireworks();
 }
 window.onload= function(){
-    setValue();
     var gui= new dat.GUI();
     var fold1= gui.addFolder('Firework Missile');
     fold1.open();
