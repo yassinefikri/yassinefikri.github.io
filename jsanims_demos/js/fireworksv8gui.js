@@ -5,18 +5,26 @@
 |          More Works : https://github.com/yassinefikri/js_animations          |
 ------------------------------------------------------------------------------*/
 
-//-----------------------------------------------------------------------------------------------------------------------\\
-//Set Your Values
-var npar = 50;  //Set Number of Particules per Firework default[50]
-var parsize = 2;  //Set Size of Particules default[2]
-var nmis = 4;  //Set Number of Fireworks default[4]
-var missize = 3;  //Set Size of Fireworks default[3]
-var mislen = 0.01;  //Firework Height default[0.01]
-var multicolmis = 0;  //Mono Color Firework [0] | Multi Color Firework [1]
-var gravity = 0.01  //Gravity default[0.01]
-var bgcolor = "linear-gradient(180deg, rgba(0,0,0,1) 24%, rgba(10,1,17,1) 47%, rgba(2,9,32,1) 73%)"; //Set The Background
-//-----------------------------------------------------------------------------------------------------------------------\\
-
+var values= {
+npar : 50,
+parsize : 2,
+nmis : 4,
+missize : 3,
+mislen : 1,
+multicolmis : false,
+gravity : 0.01,
+bgcolor : "linear-gradient(180deg, rgba(0,0,0,1) 24%, rgba(10,1,17,1) 47%, rgba(2,9,32,1) 73%)"
+};
+var guival={
+    Particules_Per_Missile : 50,
+    Pärticules_Size : 2,
+    Max_Missiles : 4,
+    Missile_Size : 3,
+    Missile_Length : 1, 
+    Multi_Color_Missile : false
+};
+var miss;
+var active = true;
 //Set Random Colors to Fireworks
 function getRandomColor() {
     var values='0123456789ABCDEF';
@@ -26,20 +34,15 @@ function getRandomColor() {
     }
     return color;
 }
-var colors= new Array(nmis); 
-for(var i=0;i<nmis;i++) colors[i]= getRandomColor(); 
 
 //Set Canvas Height & Width
-function size(){
-    cw= document.body.clientWidth; 
-    ch= window.innerHeight;
-    canvas.height=ch;
-    canvas.width=cw;
-}
 var canvas = document.querySelector("canvas");
-canvas.style.backgroundImage= bgcolor;
+var wh=window.innerHeight;
+var ww=document.body.clientWidth;
+canvas.width= ww;
+canvas.height= wh;
+canvas.style.backgroundImage= values.bgcolor;
 var c= canvas.getContext("2d");
-size();
 
 //Particules
 function partc(){
@@ -47,14 +50,14 @@ function partc(){
     this.init= function(posx,posy,col){
         this.posx=posx;
         this.posy=posy;
-        this.ray= parsize;
+        this.ray= values.parsize;
         this.col=col;
-        this.dx=(Math.random()-0.5)*Math.min(ch,cw)/70;
-        this.dy=(Math.random()-0.5)*Math.min(ch,cw)/70;
-        this.grav=gravity;
+        this.dx=(Math.random()-0.5)*Math.min(wh,ww)/70;
+        this.dy=(Math.random()-0.5)*Math.min(wh,ww)/70;
+        this.grav=values.gravity;
     }
     this.draw= function(){
-        if (multicolmis== 1) c.strokeStyle=getRandomColor();
+        if (values.multicolmis== true) c.strokeStyle=getRandomColor();
         else c.strokeStyle=this.col;
         c.lineWidth=this.ray;
         c.beginPath();
@@ -70,31 +73,33 @@ function partc(){
             this.posx+=this.dx;
             this.posy+=this.dy;
             this.dy+=this.grav;
-            this.grav+=0.008*ch/1080;
-            if(this.ray>0.1) this.ray-=0.015*parsize;
+            this.grav+=0.008*wh/1080;
+            if(this.ray>0.1) this.ray-=0.015*values.parsize;
             this.draw();
         }
     }
 }
 
 // Fireworks
-function mis(col){
+function mis(color){
     //Initialisation of Particules for A Firework 
-    this.partcs = new Array(npar);
-    for(var i=0;i<npar;i++) {
-        this.partcs[i]= new partc();
-        this.partcs[i].init(col);
+    this.partcs= [];
+    //this.partcs = new Array(values.npar);
+    for(var i=0;i<values.npar;i++) {
+        //this.partcs[i]= new partc();
+        this.partcs.push(new partc());
+        this.partcs[i].init(color);
     }
     //Initialisation Firework
     this.init= function(){
         this.col="#ffffff";
-        this.posx= Math.random()*cw/2 + cw/4;
-        this.posy= ch-5;
+        this.posx= Math.random()*ww/2 + ww/4;
+        this.posy= wh-5;
         this.lastposx=this.posx;
         this.lastposy=this.posy;
-        this.dx= (Math.random()-0.5)*cw/800;
-        this.dy= ch/200;
-        this.maxy= Math.random()*ch/2+ch/4;
+        this.dx= (Math.random()-0.5)*ww/800;
+        this.dy= wh/200;
+        this.maxy= Math.random()*wh/2+wh/4;
         this.boom=0;
         this.rdm=Math.random();
         if(this.rdm>0.573 && this.rdm<0.58) this.active=1;
@@ -103,10 +108,10 @@ function mis(col){
     this.draw= function(){
         if(this.active==1){
             c.beginPath();
-            c.lineWidth=missize;
+            c.lineWidth=values.missize;
             c.strokeStyle="white";
             c.moveTo(this.posx,this.posy);
-            c.lineTo(this.lastposx,this.lastposy+mislen*this.dy);
+            c.lineTo(this.lastposx,this.lastposy+values.mislen*this.dy/100);
             c.stroke();
         }
     }
@@ -141,7 +146,7 @@ function mis(col){
     //Check if Particules ready
     this.checkrdy= function(){
         this.rdy=1;
-        for(var i=0;i<npar;i++){
+        for(var i=0;i<values.npar;i++){
             if(this.partcs[i].rdy==0){
                 this.rdy=0;
                 break;
@@ -151,26 +156,32 @@ function mis(col){
     //Launch Particules
     this.launchpartc= function(){
         this.col=getRandomColor();
-        for(var i=0;i<npar;i++){
+        for(var i=0;i<values.npar;i++){
             this.partcs[i].init(this.posx,this.posy,this.col);
         }
     }
 }
 
-
 //Creating Fireworks
-var miss= new Array(nmis);
-for(var i=0;i<nmis;i++){
-    miss[i]=new mis(colors[i]);
-    miss[i].init();
+function createFireworks(){
+    miss= [];
+    //miss= new Array(values.nmis);
+    for(var i=0;i<values.nmis;i++){
+        //miss[i]=new mis(getRandomColor());
+        miss.push(new mis(getRandomColor()))
+        miss[i].init();
+    }
 }
+createFireworks();
+
 
 function animate(){
+    if(!active) return;
     requestAnimationFrame(animate);
-    c.clearRect(0,0,cw,ch);
-    for(var i=0;i<nmis;i++){
+    c.clearRect(0,0,ww,wh);
+    for(var i=0;i<values.nmis;i++){
         miss[i].update();
-        for(var j=0;j<npar;j++) miss[i].partcs[j].update();
+        for(var j=0;j<values.npar;j++) miss[i].partcs[j].update();
     }
 }
 animate();
@@ -178,8 +189,34 @@ animate();
 //Canvas Resize on Winwdow Resize
 window.onresize = resize;
 function resize() {
-    size();
-    for(var i=0;i<nmis;i++) {
-        miss[i].init();
-    }
+    ww= document.body.clientWidth; 
+    wh= window.innerHeight;
+    canvas.height=wh;
+    canvas.width=ww;
+    createFireworks();
+}
+window.onload= function(){
+    setValue();
+    var gui= new dat.GUI();
+    var fold1= gui.addFolder('Firework Missile');
+    fold1.open();
+    var fold2= gui.addFolder('Firework Particules');
+    fold2.open();
+    fold1.add(guival,'Multi_Color_Missile').onChange(setValue);
+    fold1.add(guival,'Missile_Length',0.1,2).onChange(setValue);
+    fold1.add(guival,'Missile_Size',2,4).onChange(setValue);
+    fold1.add(guival,'Max_Missiles',1,20).onChange(setValue);
+    fold2.add(guival,'Particules_Per_Missile',10,100).onChange(setValue);
+    fold2.add(guival,'Pärticules_Size',1,4).onChange(setValue);
+}
+function setValue(){
+    active= false;
+    values.multicolmis= guival.Multi_Color_Missile;
+    values.mislen= guival.Missile_Length;
+    values.missize= guival.Missile_Size;
+    values.nmis= guival.Max_Missiles;
+    values.parsize= guival.Pärticules_Size;
+    values.npar= guival.Particules_Per_Missile;
+    createFireworks();
+    active= true;
 }
