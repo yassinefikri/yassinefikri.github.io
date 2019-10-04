@@ -16,12 +16,14 @@ var values= {
     dirg: 1,
     sposx: [],
     sposy: [],
-    nstars: 20
+    nstars: 20,
+    timeSpeed: 1
 };
 var guival={
     Grass_Length: 5,
     WindTurbine_Speed: 4,
-    Stars_Count: 20
+    Stars_Count: 20,
+    Time_Speed: 1
 };
 
 var canvas= document.querySelector("canvas");
@@ -125,16 +127,16 @@ function changeBackground(){
     values.bgcolor="linear-gradient(180deg, rgba(0,"+values.g+","+(50+2*values.g)+",1) 0%, rgba(0,"+values.g2+","+(50+2*values.g2)+",1) 100%)";
     canvas.style.background= values.bgcolor;
     if(values.incg==1){
-        values.g+=0.25;
+        values.g+=values.timeSpeed/4;
     }
     else if(values.incg==2){
-        values.g-=0.25;
+        values.g-=values.timeSpeed/4;
     }
     else if(values.incg==3){
-        values.g2-=0.25;
+        values.g2-=values.timeSpeed/4;
     }
     else{
-        values.g2+=0.25;
+        values.g2+=values.timeSpeed/4;
     }
     if(parseInt(values.g)==100){
         values.incg=2;
@@ -227,12 +229,14 @@ window.onload= function(){
     gui.add(guival,'Grass_Length',1,10,1).onChange(setValue);
     gui.add(guival,'WindTurbine_Speed',-5,5,1).onChange(setValue);
     gui.add(guival,'Stars_Count',5,50,1).onChange(setValue);
+    gui.add(guival,'Time_Speed',1,5,1).onChange(setValue);
 }
 function setValue(){
     stopp= true;
     values.grass_lng= guival.Grass_Length;
     values.windTurbine_Speed= guival.WindTurbine_Speed;
     values.nstars= guival.Stars_Count;
+    values.timeSpeed= guival.Time_Speed;
     initCan();
     stopp= false;
 }
