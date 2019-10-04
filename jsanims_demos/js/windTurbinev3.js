@@ -49,11 +49,13 @@ function drawPay(){
     //c.fillStyle="#003f00";
     c.fillStyle="rgba(0,"+(20+values.g/2)+",0,1)";
     c.fillRect(0,7*wh/8,ww,wh);
-    for(var i=0;i<values.nstars;i++){
-        c.beginPath();
-        c.ellipse(values.sposx[i],values.sposy[i],(100-values.g2)/100,(100-values.g2)/100,0,0,Math.PI*2,true);
-        c.fillStyle="white";
-        c.fill();
+    if(values.g2<100){
+        for(var i=0;i<values.nstars;i++){
+            c.beginPath();
+            c.ellipse(values.sposx[i],values.sposy[i],(100-values.g2)/100,(100-values.g2)/100,0,0,Math.PI*2,true);
+            c.fillStyle="white";
+            c.fill();
+        }
     }
 }
 
@@ -138,15 +140,15 @@ function changeBackground(){
     else{
         values.g2+=values.timeSpeed/4;
     }
-    if(parseInt(values.g)==100){
+    if(parseInt(values.g)>=100){
         values.incg=2;
         values.dirg=0;
     }
-    if(parseInt(values.g2)==0){
+    if(parseInt(values.g2)<=0){
         values.incg=0;
         values.dirg=1;
     }
-    if(parseInt(values.g)==0 || parseInt(values.g2)==100){
+    if(parseInt(values.g)<=0 || parseInt(values.g2)>=100){
         if(values.dirg==1){
             values.incg=1;
         }
