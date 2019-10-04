@@ -21,7 +21,7 @@ var values= {
 };
 var guival={
     Grass_Length: 5,
-    WindTurbine_Speed: 4,
+    WindTurbine_Speed: 1,
     Stars_Count: 20,
     Time_Speed: 1
 };
