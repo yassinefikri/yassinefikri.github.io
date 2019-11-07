@@ -10,6 +10,9 @@ a,p{
     text-decoration: none;
     color: white;
 }
+.blacka{
+    color: black;
+}
 body{
     overflow: hidden;
 }
@@ -27,6 +30,10 @@ body{
 img{
     height: 30px;
     width: 30px;
+}
+.blackimg{
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
 }
 @media (hover:none), (hover:on-demand){
     .infos{
