@@ -46,6 +46,7 @@ h3{
 }
 body{
     position: relative;
+    min-width: 300px;
 }
 /*End Of General*/
 
@@ -66,21 +67,21 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
-.menu>ul>li{
-    color: rgb(241, 241, 241);
+.menu>ul>li,.mobmenuopened li{
+    color: rgb(211, 211, 211);
     font-size: 18px;
     padding: 20px;
     display: inline-block;
     font-style: normal;
     vertical-align: middle;
     text-align: left;
-    font-family: "Open Sans", arial, sans-serif;
+    font-family: Mid_and_a_Font;
     width: auto;
     cursor: pointer;
 }
-.menu>ul>li:hover{
+.menu>ul>li:hover,.mobmenuopened li:hover{
     color:white;
     background-color:rgba(112, 112, 112, 0.1);
 }
@@ -118,6 +119,7 @@ body{
     top: 0px;
     opacity: 0.95;
     z-index: 1;
+    overflow: auto;
 }
 .mobmenuopened ul{
     padding: 20% 10%;
@@ -125,10 +127,9 @@ body{
 }
 .mobmenuopened li{
     font-size: 30px;
-    color: white;
     padding: 2%;
     border-bottom: 1px solid white;
-    cursor: pointer;
+    display: block;
 }
 @media (hover:none), (hover:on-demand){
     .mobmenuopened ul{
@@ -143,7 +144,7 @@ body{
         cursor: pointer;
     }
 }
-/*End of Menu Color*/
+/*End of Menu*/
 
 /*Part 1*/
 #part1cont{
@@ -167,32 +168,22 @@ body{
 .part1mid{
     height: auto;
     width: 100%;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 auto;
 }
 .h1mid,.h2mid{
-    height: auto;
-    color: rgb(255, 254, 254);
-    font-size: 48px;
     padding: 2% 1%;
     margin: 1%;
     font-style: normal;
-    position: relative;
-    vertical-align: middle;
     text-align: center;
     letter-spacing: 33px;
 }
 .h1mid>h1,.h2mid>h2{
     font-family: Mid_and_a_Font;
+    color: rgb(211, 211, 211);
 }
 .h2mid{
     padding: 1%;
     margin: 1%;
-    font-size:27px;
     letter-spacing: 10px;
-    color: rgb(255, 255, 255);
 }
 .godicon{
     display: none;
@@ -204,8 +195,8 @@ body{
 @media screen and (min-width: 1000px){
     .godicon{
         display: block;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         padding: 2px;
         border: 2px solid white;
         border-radius: 50%;
@@ -223,6 +214,11 @@ body{
         border-radius: 50%;
     }
 }
+@media screen and (max-height: 400px){
+    .godicon{
+            display: none;
+        }
+}
 @media (hover:none), (hover:on-demand){ 
     .godicon{
         display: block;
@@ -232,6 +228,11 @@ body{
         border: 3px solid white;
         border-radius: 50%;
         top: 86vh;
+    }
+    @media screen and (orientation:landscape){
+        .godicon{
+            display: none;
+        }
     }
 }
 #arr{
@@ -247,7 +248,6 @@ body{
 }
 .partsofpart2cont,.partsofpart4cont,.part3row{
     width: 100%;
-    /*display: block;*/
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
@@ -292,7 +292,6 @@ body{
     text-align: center;
     border: 2px black solid;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    vertical-align: middle;
 }
 .elementofpartofpart2{
     position: relative;
@@ -393,7 +392,7 @@ body{
     font-size: 0;
     position: relative;
 }
-.part4imgcont>img,#can2{
+.part4imgcont>img{
     height: 100%;
     width: 100%;
     border: 3px;
@@ -403,11 +402,27 @@ body{
     font-size: 21px;
     margin: auto;
 }
-#mcpcvidcont{
-    background-color: #DCDCDC;
-    position: relative;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    background-color: #FFFFFF77;
+    background-color: rgba(255,255,255,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.overlaycontent{
+    background-color: white;
+    border: 3px solid black;
+    width: 70%;
+    overflow: auto;
+    font-size: 22px;
+    padding: 2%;
+    text-align: center;
+    font-weight: bold;
 }
 .vidheader{
     margin: auto;
@@ -417,38 +432,18 @@ body{
     margin: 2% auto;
     border: 3px solid black;
 }
-#mcpcdesc,#mcpcviddiv{
-    width: 100%;
-    height: auto;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 2%;
-    text-align: center;
-}
-#mcpcviddiv{
-    padding-top:0%; 
-}
-#pwdesc,#candesc{
-    width: 100%;
-    height: auto;
-    font-weight: bold;
-    font-size: 22px;
-    padding: 2%;
-    text-align: center;
-    background-color: #DCDCDC;
-    position: relative;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+.techsused{
+    display: flex;
+    justify-content: space-around;
 }
 .techused{
-    width: 24.5%;
-    height: auto;
-    display: inline-block;
-    margin: 5% auto;
+    width: 15%;
 }
 .techused>img{
     max-width: 200px;
     max-height: 220px;
+    width: 100%;
+    height: 100%;
 }
 @media screen and (min-width: 1000px){
     .techused{
@@ -470,9 +465,20 @@ body{
     transform: scaleX(1.05) scaleY(1.05);
     transform-origin: center;
 }
-#candesc a{
-    color: black;
-    font-size: 27px;
+.part4header2{
+    padding: 2.5%;
+    background-color: white;
+}
+.part4cont2{
+    margin: auto;
+    background-color: white;
+    padding-bottom: 5%;
+}
+.cp_embed_wrapper{
+    width: 70vw;
+    width: 100%;
+    /*max-width: 1000px;*/
+    margin: auto;
 }
 /*End of Part 4*/
 
