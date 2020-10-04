@@ -35,13 +35,20 @@ function getRandomColor(){
     return color;
 }
 
+var wh=0;
+var ww=0;
+function size(){
+    ww= canvas.offsetWidth; 
+    wh= canvas.offsetHeight;
+    canvas.height=wh;
+    canvas.width=ww;
+}
 //Set Canvas Height & Width
 var canvas = document.querySelector("canvas");
-var wh=window.innerHeight;
-var ww=document.body.clientWidth;
-canvas.width= ww;
-canvas.height= wh;
+canvas.style.width="100%";
+canvas.style.height="100%";
 canvas.style.backgroundImage= values.bgcolor;
+size();
 var c= canvas.getContext("2d");
 
 //Particules
@@ -185,10 +192,7 @@ animate();
 //Canvas Resize on Winwdow Resize
 window.onresize = resize;
 function resize() {
-    ww= document.body.clientWidth; 
-    wh= window.innerHeight;
-    canvas.height=wh;
-    canvas.width=ww;
+    size();
     createFireworks();
 }
 window.onload= function(){

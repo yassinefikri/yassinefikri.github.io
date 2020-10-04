@@ -16,6 +16,11 @@ a,p{
 body{
     overflow: hidden;
 }
+#canvas_container{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
 .infos{
     padding: 1% 0%;
     width: 100%;

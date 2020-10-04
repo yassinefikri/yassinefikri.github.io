@@ -25,22 +25,29 @@ var guival={
     Stars_Count: 20,
     Time_Speed: 1
 };
+var ww= 0; 
+var wh= 0;
+
+//Setting Canvas Height & Width
+function size(){
+    wh=canvas.offsetHeight;
+    ww=canvas.offsetWidth;
+    canvas.height=wh;
+    canvas.width=ww;
+}
 
 var canvas= document.querySelector("canvas");
-var ww= document.body.clientWidth; 
-var wh= window.innerHeight;
+canvas.style.width="100%";
+canvas.style.height="100%";
+canvas.style.background=values.bgcolor;
+size();
+var c= canvas.getContext("2d");
 
 for(var i=0;i<values.nstars;i++){
     values.sposx.push(parseInt(Math.random()*ww));
     values.sposy.push(parseInt(Math.random()*wh/3));
 }
 
-//Setting Canvas Height & Width
-canvas.width= ww;
-canvas.height= wh;
-canvas.style.background=values.bgcolor;
-
-var c= canvas.getContext("2d");
 values.windTurbine_length= Math.min(2*wh/5,300);
 countWindTurbines= parseInt(ww/(values.windTurbine_length*4/3));
 
@@ -219,10 +226,7 @@ function initCan(){
 //Resizing the Canvas when Resizing Window
 window.onresize = resize;
 function resize() {
-    ww= document.body.clientWidth; 
-    wh= window.innerHeight;
-    canvas.height=wh;
-    canvas.width=ww;
+    size();
     initCan();
 }
 
