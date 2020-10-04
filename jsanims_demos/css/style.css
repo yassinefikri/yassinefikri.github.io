@@ -40,12 +40,3 @@ body{
     filter: invert(100%);
     -webkit-filter: invert(100%);
 }
-@media (hover:none), (hover:on-demand){
-    .infos{
-        font-size: 50px;
-    }
-    img{
-        height: 50px;
-        width: 50px;
-    }
-}
