@@ -2,337 +2,181 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Yassine Fikri">
         <meta name="description" content="Personal Website Of Yassine Fikri">
         <meta name="keywords" content="Yassine,Fikri,ENSAO,Software Engineering Student,Web Developer">
         <title>Yassine Fikri</title>
-        <link rel="stylesheet" href="css/style.css"> 
-        <link rel="stylesheet" href="css/hamburger.css"> 
-        <link rel="shortcut icon" href="images/icone.png" type="image/x-icon" />
-        <script src="js/jquery.js"></script>
-        <script src="js/my_jquery.js"></script>
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
-        <div id="container">
-
-            <!--Menu-->
-            <div id="globmenu">
-                <div class="mobmenu">
-                    <div id="hamb">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="menu" id="menu">
-                    <ul>
-                        <li id="mn1">Home</li>
-                        <li id="mn2">Education</li>
-                        <li id="mn3">Skills</li>
-                        <li id="mn4">Experiences</li>
-                        <li id="mn5">Contact</li>
+        <div class="mycont">
+            <nav class="navbar navbar-expand-lg navbar-dark navbg fixed-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-            <!--End of Menu-->
-
-            <!--Part 1-->
-            <div id="part1cont">
+            </nav>
+            <div class="part1" id="home">
                 <canvas id="can1"></canvas>
-                <div class="part1" id="part1">
-                    <div class="part1mid">
-                        <div class="h1mid">
-                            <h1>YASSINE FIKRI</h1>
-                        </div>
-                        <div class="h2mid">
-                            <h2>Software Engineering Student / Web Developer</h2>
-                        </div>
-                    </div>
-                    <div class="godicon">
-                        <img src="images/arr.png" id="arr">
+                <div class="cantext text-center">
+                    <h1 class="text-uppercase my-2">Yassine Fikri</h1>
+                    <h2 class="h4 m-2">Software Engineering Student / Web Developer</h2>
+                    <div class="links flex flex-wrap justify-content-around my-3 py-1">
+                        <a class="mx-3" href="https://github.com/yassinefikri" target="_blank"><img src="images/github.png"></a>
+                        <a class="mx-3" href="https://codepen.io/yassinefikri" target="_blank"><img src="images/codepen.png"></a>
+                        <a class="mx-3" href="https://www.linkedin.com/in/yassine-fikri-082b89193/" target="_blank"><img src="images/linkedin.png"></a>
                     </div>
                 </div>
             </div>
-            <!--End of Part1-->
-
-            <!--Part 2-->
-            <div class="part2" id="part2">
-                <div class="part2header">
-                    <h3>Education</h3>
+            <div class="part3 px-4 py-5" id="education">
+                <h3 class="text-center display-4 mytitledark">Education</h3>
+                <br><br>
+                <div class="edu" data-aos="fade-up">
+                    <div class="edu_img mx-auto">
+                        <img src="images/edu3.png">
+                    </div>
+                    <div class="edu_content">
+                        <h4>ENSA OUJDA</h4>
+                        <h5 class="text-muted">2018-2021</h5>
+                        <h5>Cycle Ingenieur</h5>
+                        <h5>Génie informatique</h5>
+                    </div>
                 </div>
-                <div class="partsofpart2cont">
-                    <div class="partofpart2" id="part2l">
-                        <div class="elementofpartofpart2">
-                            <div class="partofpart2header">
-                                <p>BACCALAURIAT SCIENCE MATHEMATIQUES A</p>
-                            </div>
-                            <div class="partofpart2content">
-                                <p>Mention : Bien<br>
-                                    Lycée Mohammed Abid El Jabiri | Oujda<br>
-                                    2015-2016
-                                </p>
-                            </div>
+                <br><br><br>
+                <div class="edu" data-aos="fade-up">
+                    <div class="edu_img mx-auto">
+                        <img src="images/edu2.png">
+                    </div>
+                    <div class="edu_content">
+                        <h4>ENSA OUJDA</h4>
+                        <h5 class="text-muted">2016-2018</h5>
+                        <h5>Cycle Préparatoire</h5>
+                        <h5>Classes Préparatoires Integrés</h5>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="edu" data-aos="fade-up">
+                    <div class="edu_img mx-auto">
+                        <img src="images/edu1.png">
+                    </div>
+                    <div class="edu_content">
+                        <h4>Lycée Mohammed Abid El Jabiri | Oujda</h4>
+                        <h5 class="text-muted">2015-2016</h5>
+                        <h5>Baccalaureat Sciences Mathematiques A</h5>
+                        <h5>Mention : Bien</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="part4 p-5 text-light" id="skills">
+                <h3 class="text-center display-4 mytitlelight">Skills</h3>
+                <br>
+                <div class="d-flex flex-wrap justify-content-around">
+                    <div class="skills_cat m-4" data-aos="fade-up">
+                        <h3>Web Developement</h3>
+                        <br>
+                        <div class="pl-4">
+                            <h6 class="mb-4">PHP / Symfony</h6>
+                            <h6 class="mb-4">HTML / CSS / Bootstrap</h6>
+                            <h6>JS / Query / React</h6>
                         </div>
                     </div>
-                    <div class="partofpart2" id="part2m">
-                        <div class="elementofpartofpart2">
-                            <div class="partofpart2header">
-                                <p>CYCLE PREPARATOIRE</p>
-                            </div>
-                            <div class="partofpart2content">
-                                <p>Classes Préparatoires Integrés<br>
-                                    ENSA Oujda<br>
-                                    2016-2018
-                                </p>
-                            </div>
+                    <div class="skills_cat m-4" data-aos="fade-up">
+                        <h3>Programming</h3>
+                        <br>
+                        <div class="pl-4">
+                            <h6 class="mb-4">C</h6>
+                            <h6 class="mb-4">C++</h6>
+                            <h6 class="mb-4">C#</h6>
+                            <h6>JAVA / JEE</h6>
                         </div>
                     </div>
-                    <div class="partofpart2" id="part2r">
-                        <div class="elementofpartofpart2">
-                            <div class="partofpart2header">
-                                <p>CYCLE INGENIEUR</p>
-                            </div>
-                            <div class="partofpart2content">
-                                <p>Genie Informatique<br>
-                                    ENSA Oujda<br>
-                                    2018-2021
-                                </p>
-                            </div>
+                    <div class="skills_cat m-4" data-aos="fade-up">
+                        <h3>Databases / Others</h3>
+                        <br>
+                        <div class="pl-4">
+                            <h6 class="mb-4">MySQL</h6>
+                            <h6 class="mb-4">MongoDB</h6>
+                            <h6 class="mb-4">Git / Github</h6>
+                            <h6 class="mb-4">Linux</h6>
+                            <h6>PhotoShop</h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--End of Part 2-->
-
-            <!--Part 3-->
-            <div class="part3" id="part3">
-                <div class="part3header">
-                    <h3>Skills</h3>
-                </div>
-                <div class="part3content">
-                    <br>
-                    <div class="part3row">
-                        <div class="partofpart3" id="part3l1">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>C/C++</p>
-                                </div>
+            <div class="part3 py-5" id="experience">
+                <h3 class="text-center display-4 mytitledark">Experience</h3>
+                <br><br>
+                <div class="mx-4">
+                    <div class="d-flex flex-wrap justify-content-around">
+                        <a data-aos="fade-up" class="card my-4 text-decoration-none text-reset" href="https://clubgc-ensao.com" target="_blank">
+                            <img src="images/gcweb.jpg" class="card-img-top">
+                            <div class="card-body text-center py-4">
+                                <h5 class="card-title mb-0">Club GC Web</h5>
                             </div>
-                        </div>
-                        <div class="partofpart3" id="part3m1">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>JAVA/JEE</p>
-                                </div>
+                        </a>
+                        <a data-aos="fade-up" class="card my-4 text-decoration-none text-reset" href="#home">
+                            <img src="images/pweb.jpg" class="card-img-top">
+                            <div class="card-body text-center py-4">
+                                <h5 class="card-title mb-0">Personal Web</h5>
                             </div>
-                        </div>
-                        <div class="partofpart3" id="part3r1">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>C#/.Net</p>
-                                </div>
+                        </a>
+                        <a data-aos="fade-up" class="card my-4 text-decoration-none text-reset" href="https://www.youtube.com/watch?v=UL7QOMiLzdU" target="_blank">
+                            <img src="images/mcpc18.jpg" class="card-img-top">
+                            <div class="card-body text-center py-4">
+                                <h5 class="card-title mb-0">MCPC 2018</h5>
                             </div>
-                        </div>
-                    </div>
-                    <div class="part3row">
-                        <div class="partofpart3" id="part3l2">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>HTML5/CSS3</p>
-                                </div>
+                        </a>
+                        <a data-aos="fade-up" class="card my-4 text-decoration-none text-reset" href="https://www.youtube.com/watch?v=UL7QOMiLzdU" target="_blank">
+                            <img src="images/jsanim.JPG" class="card-img-top">
+                            <div class="card-body text-center py-4">
+                                <h5 class="card-title mb-0">JS Animations</h5>
                             </div>
-                        </div>
-                        <div class="partofpart3" id="part3m2">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>JS/JQuery/React</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="partofpart3" id="part3r2">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>PHP/Symfony</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="part3row">
-                        <div class="partofpart3" id="part3l3">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>MYSQL</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="partofpart3" id="part3m3">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>PL/SQL</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="partofpart3" id="part3r3">
-                            <br>
-                            <div class="elementofpartofpart3">
-                                <div class="partofpart3header">
-                                    <p>PHOTOSHOP,...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br><br><br>
-                </div>
-            </div>
-            <!--End of Part 3-->
-
-            <!--Part 4-->
-            <div class="exp" id="part4">
-                <div class="part4">
-                    <div class="part4header">
-                        <h3>Experiences</h3>
-                    </div>
-                    <div class="partsofpart4cont">
-                        <div class="partofpart4" id="gcwebpart">
-                            <div class="elementofpartofpart4" id="gcwebp">
-                                <div class="part4imgcont">
-                                    <img src="images/gclogo.jpeg" id="gcweb">
-                                </div>
-                                <div class="partofpart4content">
-                                    <p>Club Genie Civil Website</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="partofpart4" id="pwebpart">
-                            <div class="elementofpartofpart4" id="pwebp">
-                                <div class="part4imgcont">
-                                    <img src="images/sw.jpg" id="pweb">
-                                </div>
-                                <div class="partofpart4content">
-                                    <p>Personal Website</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="partofpart4" id="mcpcpart">
-                            <div class="elementofpartofpart4" id="mcpcp">
-                                <div class="part4imgcont">
-                                    <img src="images/mcpc18.jpg" id="mcpc">
-                                </div>
-                                <div class="partofpart4content">
-                                    <p>MCPC 2018</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Descripton Default Position-->
-                        <div class="overlay">
-                            <div class="overlaycontent" id="gcwdesc">
-                                <p>Website i've made for Club Genie Civil ENSAO<br><br>
-                                    <a href="https://clubgc-ensao.com" target="_blank" style="color:black">https://clubgc-ensao.com</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlaycontent" id="pwdesc">
-                                <p>Modern and Responsive CV website that i've made<br><br>
-                                Technologies used:</p>
-                                <div class="techsused">
-                                    <div class="techused">
-                                        <img src="images/html.png">
-                                    </div>
-                                    <div class="techused">
-                                        <img src="images/css.png">
-                                    </div>
-                                    <div class="techused">
-                                        <img src="images/js.png">
-                                    </div>
-                                    <div class="techused">
-                                        <img src="images/jq.png">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="overlay">
-                            <div class="overlaycontent" id="mcpcvidcont">
-                                <div id="mcpcviddiv">
-                                    <div class="vidheader">
-                                        <p>MCPC 2018 Resume :</p>
-                                    </div>
-                                    <iframe id="mcpcvid" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Of Descriptions-->
-                    </div>
-                    <div class="part4header2">
-                        <h3 style="font-size: 30px">Some of my JS Drawings</h3>
-                    </div>
-                    <div class="part4cont2">
-                        <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="yassinefikri" data-slug-hash="dyyeapQ" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Snow canvas">
-                        <span>See the Pen <a href="https://codepen.io/yassinefikri/pen/dyyeapQ">
-                        Snow canvas</a> by Yassine Fikri (<a href="https://codepen.io/yassinefikri">@yassinefikri</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                        <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="yassinefikri" data-slug-hash="rNNNNox" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="WindTurbines canvas">
-                        <span>See the Pen <a href="https://codepen.io/yassinefikri/pen/rNNNNox">
-                        WindTurbines canvas</a> by Yassine Fikri (<a href="https://codepen.io/yassinefikri">@yassinefikri</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                        <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="yassinefikri" data-slug-hash="RwbmwJX" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Rain canvas">
-                        <span>See the Pen <a href="https://codepen.io/yassinefikri/pen/RwbmwJX">
-                        Rain canvas</a> by Yassine Fikri (<a href="https://codepen.io/yassinefikri">@yassinefikri</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                        <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="yassinefikri" data-slug-hash="GRKPRgN" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Fireworks canvas">
-                        <span>See the Pen <a href="https://codepen.io/yassinefikri/pen/GRKPRgN">
-                        Fireworks canvas</a> by Yassine Fikri (<a href="https://codepen.io/yassinefikri">@yassinefikri</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                        <p class="codepen" data-height="500" data-theme-id="dark" data-default-tab="result" data-user="yassinefikri" data-slug-hash="zYOyOby" data-preview="true" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Space canvas">
-                        <span>See the Pen <a href="https://codepen.io/yassinefikri/pen/zYOyOby">
-                        Space canvas</a> by Yassine Fikri (<a href="https://codepen.io/yassinefikri">@yassinefikri</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                        </p>
-                        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                        </a>
                     </div>
                 </div>
             </div>
-            <!--End Of Part 4-->
-
-            <!--Part 5-->
-            <div class="coord" id="part5">
-                <div class="part5header">
-                    <h3>Personal Infos</h3>
-                </div>
-                <div class="part5content">
-                    <p>School : National Schools of Applied Science | ENSAO</p>
-                    <p>Email : ysn.fikri@gmail.com</p>
-                    <p>Age : 20 years old</p>
-                    <p>Location : Oujda, Morocco</p>
-                    <div class="links">
-                        <div class="link"><a href="https://github.com/yassinefikri" target="_blank"><img src="images/github.png"></a></div>
-                        <div class="link"><a href="https://codepen.io/yassinefikri" target="_blank"><img src="images/codepen.png"></a></div>
-                        <div class="link"><a href="https://www.linkedin.com/in/yassine-fikri-082b89193/" target="_blank"><img src="images/linkedin.png"></a></div>
-                    </div>
+            <div class="part4 p-5 text-light" id="contact">
+                <h3 class="text-center display-4 mytitlelight">Contact</h3>
+                <br>
+                <div class="text-center">
+                    <h6 class="h5 mb-3">School : National Schools of Applied Science / ENSAO</h6>
+                    <h6 class="h5 mb-3">Email : ysn.fikri@gmail.com</h6>
+                    <h6 class="h5 mb-3">Location : Oujda, Morocco</h6>
+                    <h6 class="h5 mb-3">Age : 21 years old</h6>
                 </div>
             </div>
-            <!--End Of Part 5-->
-
-            <div class="end">
-                <img src="images/gou.png" id="leftgoup">
-                <img src="images/gou.png" id="rightgoup">
-                <p>Copyright © 2020 Yassine Fikri. All rights reserved</p>
+            <div class="footer py-4 text-center align-middle">
+                Copyright © 2020 Yassine Fikri. All rights reserved
             </div>
-            <script src="js/starsv3e.js"></script>
         </div>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="js/starsv3e.js"></script>
+        <script src="js/script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </body>
 </html>

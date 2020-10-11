@@ -8,15 +8,19 @@
 var nstar= 300; // Set the Number of Stars , default [300]
 var backgroundcolor= "radial-gradient(#000000,#090c12)"; // Set Background Color default["radial-gradient(#000000,#090c2)"]
 var starsz = 0.045 // Set stars size increase , default [0.045]
-
+var ch;
+var cw;
 
 function size(){
-    cw= document.body.clientWidth; 
-    ch= window.innerHeight;
+    ch= canvas.offsetHeight;
+    cw= canvas.offsetWidth;
     canvas.height=ch;
     canvas.width=cw;
 }
+
 var canvas= document.getElementById("can1");
+canvas.style.width="100%";
+canvas.style.height="100%";
 canvas.style.backgroundImage= backgroundcolor;
 size();
 var c= canvas.getContext("2d");
@@ -86,6 +90,7 @@ function animate1(){
 animate1();
 
 //Resizing the Canvas when Resizing Window
+window.onresize = resize;
 function resize() {
     size();
     for(var i=0;i<nstar;i++) {
