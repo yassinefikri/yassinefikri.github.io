@@ -2,6 +2,9 @@
     font-family: Balthazar;
     src: url(fonts/Balthazar-Regular/Balthazar-Regular.ttf);
 }
+body{
+	overflow-x: hidden;
+}
 nav{
     transition: .3s;
 }
