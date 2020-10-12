@@ -8,6 +8,9 @@ body{
 nav{
     transition: .3s;
 }
+nav button{
+    margin: 5px;
+}
 nav ul{
     padding: 10px 0px;
 }
