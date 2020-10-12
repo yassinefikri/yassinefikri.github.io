@@ -81,6 +81,11 @@ nav{
     height: 100%;
     width: 100%;
 }
+@media only screen and (max-width: 635px) {
+    .skills_cat{
+        width: 100%;
+    }
+}
 .part4{
     background-color: rgb(10, 10, 10);
 }
