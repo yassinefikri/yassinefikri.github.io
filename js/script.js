@@ -5,7 +5,7 @@ $(document).ready(function(){
     //Nav Background Color
     function navbackgfunction(){
         if($(window).scrollTop()==0){
-            $('nav').removeClass("navbg");
+            if($('nav button').attr('aria-expanded')=="false") $('nav').removeClass("navbg");
         }
         else{
             $('nav').addClass("navbg");
@@ -23,11 +23,18 @@ $(document).ready(function(){
         }
     })
 
-    $('a[href*=\\#]').on('click', function(e){
+    $('nav a[href*=\\#],#pweb').on('click', function(e){
         e.preventDefault();
+        if($(this).hasClass('nav-link')) $(this).blur();
         $('html, body').animate({
-            scrollTop : $(this.hash).offset().top
+            scrollTop : $(this.hash).offset().top-50
         }, 500);
+    });
+
+    $('a.card').hover(function(){
+        $(this).stop(true,true).animate({top:'-8px'},300);
+    },function(){
+        $(this).stop(true,true).animate({top:'0px'},300);
     });
 
 })

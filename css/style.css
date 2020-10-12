@@ -8,6 +8,12 @@ body{
 nav{
     transition: .3s;
 }
+nav ul{
+    padding: 10px 0px;
+}
+nav li{
+    padding: 1px 5px;
+}
 .navbg{
     background-color: rgb(20, 20, 20);
 }
