@@ -40,6 +40,9 @@ nav li{
 .cantext h1{
     letter-spacing: 2vw;
 }
+.cantext h2{
+    letter-spacing: 0.2vw;
+}
 .cantext a img{
     height: 30px;
     width: 30px;
